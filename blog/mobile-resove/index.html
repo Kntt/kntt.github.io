@@ -1,0 +1,962 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>移动端网页布局方法总结</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.16" />
+        
+
+
+        
+            <meta name="author" content="Kntt">
+        
+        
+            <meta name="description" content="移动端网页布局中需要注意事项以及解决方法总结">
+        
+
+        
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:title" content="移动端网页布局方法总结"/>
+<meta name="twitter:description" content="移动端网页布局中需要注意事项以及解决方法总结"/>
+
+
+
+        <meta property="og:title" content="移动端网页布局方法总结" />
+<meta property="og:description" content="移动端网页布局中需要注意事项以及解决方法总结" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://liuys.me/blog/mobile-resove/" />
+
+
+<meta property="og:updated_time" content="2016-09-20T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="移动端网页布局方法总结">
+<meta itemprop="description" content="移动端网页布局中需要注意事项以及解决方法总结">
+
+
+<meta itemprop="dateModified" content="2016-09-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="271">
+
+
+
+<meta itemprop="keywords" content="CSS3,HTML5," />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <link rel="stylesheet" href="/css/main.min.css" />
+                
+            
+                
+                    <link rel="stylesheet" href="/css/style.css" />
+                
+            
+        
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="/">Kntt&#39;s blog</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                        
+                            <i class="fa fa-home">&nbsp;</i>首页
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog">
+                        
+                            <i class="fa fa-edit">&nbsp;</i>博客
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories">
+                        
+                            <i class="fa fa-th">&nbsp;</i>分类
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                        
+                            <i class="fa fa-user">&nbsp;</i>关于我
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="请输入关键字" />
+                    <input type="hidden" name="q" value="site:http://liuys.me/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="请输入关键字" />
+                <input type="hidden" name="q" value="site:http://liuys.me/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                
+                                    <i class="fa fa-home">&nbsp;</i>
+                                
+                                首页
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog">
+                            <h3>
+                                
+                                    <i class="fa fa-edit">&nbsp;</i>
+                                
+                                博客
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-th">&nbsp;</i>
+                                
+                                分类
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                关于我
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>最新发表</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://liuys.me/blog/mobile-resove/"><p>移动端网页布局方法总结</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&text=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&title=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&title=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&title=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Kntt&body=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://liuys.me/blog/mobile-resove/">移动端网页布局方法总结</a></h1>
+            
+        
+        
+            <p>移动端网页布局中需要注意事项以及解决方法总结</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-09-20'>
+            September 20, 2016</time>
+        <span class="author">Kntt</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&text=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&title=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&title=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f&title=%e7%a7%bb%e5%8a%a8%e7%ab%af%e7%bd%91%e9%a1%b5%e5%b8%83%e5%b1%80%e6%96%b9%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Kntt&body=http%3a%2f%2fliuys.me%2fblog%2fmobile-resove%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+    
+        
+    
+
+
+        
+
+        <a href="http://liuys.me/blog/mobile-resove/" class="image featured">
+            <img src="/img/2016/09/2016-09.png" alt="" />
+        </a>
+    
+
+
+    <div id="content">
+        
+
+<h3 id="1-移动端-a-input标签被点击时查实的半透明灰色背景">1. 移动端，a、input标签被点击时查实的半透明灰色背景</h3>
+
+<p>描述：发生在wp操作系统中</p>
+
+<pre><code>&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="2-关闭ios键盘首字母大写">2.关闭IOS键盘首字母大写</h3>
+
+<p>描述：</p>
+
+<pre><code>&lt;input type=&quot;text&quot; autocapitalize=&quot;off&quot; /&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="3-禁止文本缩放">3.禁止文本缩放</h3>
+
+<p>描述：</p>
+
+<pre><code>html {
+    -webkit-text-size-adjust: 100%;
+}
+</code></pre>
+
+<hr />
+
+<h3 id="4-清除输入框内阴影">4.清除输入框内阴影</h3>
+
+<p>描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除</p>
+
+<pre><code>input,
+textarea {
+    border: 0;
+    -webkit-appearance: none;
+}
+</code></pre>
+
+<hr />
+
+<h3 id="5-忽略页面的数字为电话-忽略email">5.忽略页面的数字为电话，忽略email</h3>
+
+<p>描述：</p>
+
+<pre><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no, email=no&quot;/&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="6-快速回弹滚动">6.快速回弹滚动</h3>
+
+<p>描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；</p>
+
+<pre><code>.xxx {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+</code></pre>
+
+<hr />
+
+<h3 id="7-禁止选中内容">7.禁止选中内容</h3>
+
+<p>描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;</p>
+
+<pre><code>.user-select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+// 兼容ie6-9
+&lt;any onselectstart=&quot;return false;&quot; unselectable=&quot;on&quot;&gt;&lt;/any&gt;
+</code></pre>
+
+<hr />
+
+<h3 id="8-移动端取消touch高亮效果">8.移动端取消touch高亮效果</h3>
+
+<p>描述：移动端页面，所有a标签在触发点击时或者所有设置了伪类 :active 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过css以下方法来禁止：</p>
+
+<pre><code>.xxx {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+</code></pre>
+
+<hr />
+
+<h3 id="9-移动端禁止保存或拷贝图像">9.移动端禁止保存或拷贝图像</h3>
+
+<p>描述：手机或者pad上长按图像 img ，会弹出选项 存储图像 或者 拷贝图像，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：（IOS有效）</p>
+
+<pre><code>img {
+    -webkit-touch-callout: none;
+}
+</code></pre>
+
+<hr />
+
+<h3 id="10-解决字体在移动端比例缩小后出现锯齿的问题">10.解决字体在移动端比例缩小后出现锯齿的问题</h3>
+
+<p>描述：</p>
+
+<pre><code>html {
+    -webkit-font-smoothing: antialiased;
+}
+</code></pre>
+
+<hr />
+
+<h3 id="11-box-sizing-border-box-改变盒子模型的计算方式">11.box-sizing：border-box；改变盒子模型的计算方式</h3>
+
+<p>描述：不仅仅是移动端应用，响应式页面都这么玩，根据需要给元素设置，*只代表元素；</p>
+
+<pre><code>* {
+    box-sizing：border-box；
+}
+</code></pre>
+
+<hr />
+
+<h3 id="12-按钮被按下效果">12.按钮被按下效果</h3>
+
+<p>描述：</p>
+
+<pre><code>button:active  {
+    按下样式；
+}
+document.body.addEventListener('touchend', function () { });
+</code></pre>
+
+<hr />
+
+<h3 id="13-按钮被按下效果">13.按钮被按下效果</h3>
+
+<p>描述：</p>
+
+<pre><code>button:active  {
+    按下样式；
+}
+document.body.addEventListener('touchend', function () { });
+</code></pre>
+
+<hr />
+
+<h3 id="14-设置input里面placeholder字体的大小">14.设置input里面placeholder字体的大小</h3>
+
+<p>描述：</p>
+
+<pre><code>::-webkit-input-placeholder{ font-size:10pt;}
+</code></pre>
+
+<hr />
+
+<h3 id="15-移动端-图片技巧">15.移动端，图片技巧</h3>
+
+<p>描述：记得加上display：block；属性来解决img的边缘空白间隙的1px像素。 图片要适应不同的手机要设置width:100%;而且不能添加高度。</p>
+
+<pre><code>img{
+    display:block
+}
+</code></pre>
+
+<hr />
+
+<h3 id="16-audio元素和video元素在ios和android中无法自动播放">16.audio元素和video元素在IOS和Android中无法自动播放</h3>
+
+<p>描述：可以做成触屏就播放，来解决</p>
+
+<pre><code>$('html').one('touchstart',function(){
+    audio.play()
+})
+</code></pre>
+
+<hr />
+
+<h3 id="17-消除transition闪屏">17.消除transition闪屏</h3>
+
+<p>描述：可以开启硬件加速，见18</p>
+
+<pre><code>.css{
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+}
+</code></pre>
+
+<hr />
+
+<h3 id="18-开启硬件加速-解决页面闪白-保证动画流畅">18.开启硬件加速，解决页面闪白，保证动画流畅</h3>
+
+<p>描述：设计高性能CSS3动画的几个要素，尽可能地使用合成属性transform和opacity来设计CSS3动画，不使用position的left和top来定位，<strong>利用translate3D开启GPU加速</strong></p>
+
+<pre><code>.css {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+</code></pre>
+
+<hr />
+
+<h3 id="19-针对适配等比缩放的方法">19.针对适配等比缩放的方法</h3>
+
+<p>描述：神器~</p>
+
+<pre><code>@media only screen and (min-width: 1024px){
+    body{zoom:3.2;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body{zoom:2.4;}
+}
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    body{zoom:2;}
+}
+@media only screen and (min-width: 540px) and (max-width: 639px) {
+    body{zoom:1.68;}
+}
+@media only screen and (min-width: 480px) and (max-width: 539px) {
+    body{zoom:1.5;}
+}
+@media only screen and (min-width: 414px) and (max-width: 479px) {
+    body{zoom:1.29;}
+}
+@media only screen and (min-width: 400px) and (max-width: 413px) {
+    body{zoom:1.25;}
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+    body{zoom:1.17;}
+}
+@media only screen and (min-width: 360px) and (max-width:374px) {
+    body{zoom:1.125;}
+}
+</code></pre>
+
+<p>[^本文摘自互联网，以及工作中遇到的问题和处理过程]</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/html5'>HTML5</a></li>
+    
+        <li><a href='/categories/css3'>CSS3</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'shortname';
+    var disqus_identifier = 'http:\/\/liuys.me\/blog\/mobile-resove\/';
+    var disqus_title = '移动端网页布局方法总结';
+    var disqus_url = 'http:\/\/liuys.me\/blog\/mobile-resove\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="/" class="logo"><img src="/img/main/logo.jpg" alt="Kntt&#39;s Blog" /></a>
+                
+            
+            
+                <header>
+                    <h2>I&#39;M KNTT</h2>
+                    <p>立志卓越，方正为人</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:kntt9968@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3><i class="fa fa-file-text"></i>最新发表</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://liuys.me/blog/mobile-resove/">移动端网页布局方法总结</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2016-09-20'>
+                                    September 20, 2016</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><i class="fa fa-th-list"></i><a href="/categories/">分类</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/css3/">CSS3</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/html5/">HTML5</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2><i class="fa fa-mortar-board"></i>关于我</h2>
+            <p>前端攻城狮，80后。熟练使用HTML5，CSS3，JavaScript，以及AngularJs，Vue.js等MVVM框架，jquery，zepto等热门JS库；熟悉ES6新语法规范（现在用ES6语法规范来完成工作需求），喜欢并且熟练使用Gulp，Grunt，Webpack等前端自动化工具（懒...）;后端技术，熟悉NodeJS...</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button big">更多...</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:kntt9968@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Kntt&#39;s Blog. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+
+        
+            
+                
+                    <script src="/js/main.min.js"></script>
+                
+            
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

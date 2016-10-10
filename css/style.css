@@ -1,0 +1,12 @@
+#header .links ul li a { font-family: "Microsoft Yahei"; font-size: .9em; font-weight: 600; }
+#intro header h2 { font-size: 1.4em; }
+#menu .links>li a h3 { font-size: .9em; }
+#sidebar .blurb p { text-align: justify; }
+.blurb .fa { margin-right: 8px; font-size: 20px; vertical-align: middle; }
+.blurb h2, .posts h3, #menu .links>li a p { font-family: "Microsoft Yahei"; }
+.posts .fa { margin-right: 8px; font-size: 20px; vertical-align: middle; }
+#intro header p { font-family: "Microsoft Yahei"; font-size: 1em; }
+#intro .icons a { opacity: 1; }
+.icons .fa { font-size: 30px; color: #666; }
+.button, button, input[type=submit], input[type=reset], input[type=button] { border: 1px solid #ddd; font-family: "Microsoft Yahei"; padding: 0 2em; height: 3.8125em;line-height: 3.8125em; }
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{ font-family: "Microsoft Yahei" }
