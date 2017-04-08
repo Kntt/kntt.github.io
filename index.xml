@@ -2,12 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kntt&#39;s Blog</title>
-    <link>http://liuys.me/</link>
+    <link>http://liuys.me/index.xml</link>
     <description>Recent content on Kntt&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 04 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Mar 2016 20:10:46 +0100</lastBuildDate>
     <atom:link href="http://liuys.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>关于我</title>
+      <link>http://liuys.me/about/</link>
+      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      
+      <guid>http://liuys.me/about/</guid>
+      <description>
+
+&lt;h2 id=&#34;i-class-fa-fa-user-i-个人说明&#34;&gt;&lt;i class=&#34;fa fa-user&#34;&gt;&lt;/i&gt; 个人说明&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;刘岩松&lt;/strong&gt;，1988年出生，热爱互联网技术，《大众软件》是我的第一任计算机老师，看过的兄弟你们懂的~；喜欢逻辑性强的东西（数学，物理，化学）；大学专业是化学，从事过一段化工行业的工作，但是对计算机的热情从未减弱，一直自学计算机技术；自学WEB技术后，一直从事前端工作；熟练使用&lt;strong&gt;HTML5&lt;/strong&gt;，&lt;strong&gt;CSS3&lt;/strong&gt;，&lt;strong&gt;JavaScript&lt;/strong&gt;，以及&lt;strong&gt;AngularJs&lt;/strong&gt;，&lt;strong&gt;Vue.js&lt;/strong&gt;等MVVM框架，&lt;strong&gt;jquery&lt;/strong&gt;，&lt;strong&gt;zepto&lt;/strong&gt;等热门JS库；熟悉&lt;strong&gt;ES6&lt;/strong&gt;新语法规范（现在用&lt;strong&gt;ES6&lt;/strong&gt;语法规范来完成工作需求），喜欢并且熟练使用Gulp，Grunt，Webpack等前端自动化工具（懒&amp;hellip;）;后端技术，熟悉&lt;strong&gt;NodeJS&lt;/strong&gt;（写过项目，继续完善中&amp;hellip;），&lt;strong&gt;PHP&lt;/strong&gt;(最好的语言，你懂的)，&lt;strong&gt;Golang&lt;/strong&gt;（语法简单，非常适合高并发处理）；还会熟练使用&lt;strong&gt;Photoshop&lt;/strong&gt;；本人喜欢研究“技（zhuang）术（bi）”，希望认认识热爱技术的朋友！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;i-class-fa-fa-bullhorn-i-博客说明&#34;&gt;&lt;i class=&#34;fa fa-bullhorn&#34;&gt;&lt;/i&gt; 博客说明&lt;/h2&gt;
+
+&lt;p&gt;一句话，岁数大了记性不好（23333）；开个玩笑，把博客当作笔记，作为一种积累，时不时的看看自己最近有什么收获；每个阶段对于知识的理解程度都不相同，希望通过写博客的过程再学习一遍，同时也可以分享给需要的人（欢迎指正错误）；本博客使用&lt;a href=&#34;https://www.gohugo.io/&#34;&gt;Hugo&lt;/a&gt;搭建;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;i-class-fa-fa-phone-i-与我联系&#34;&gt;&lt;i class=&#34;fa fa-phone&#34;&gt;&lt;/i&gt; 与我联系&lt;/h2&gt;
+
+&lt;p&gt;&lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt; : &lt;a href=&#34;mailto://kntt9968@gmail.com&#34;&gt;kntt9968@gmail.com&lt;/a&gt;&lt;br&gt;
+&lt;i class=&#34;fa fa-send&#34;&gt;&lt;/i&gt;：&lt;a href=&#34;http://liuys.me&#34;&gt;http://liuys.me&lt;/a&gt;&lt;br&gt;
+&lt;i class=&#34;fa fa-qq&#34;&gt;&lt;/i&gt; : 76701782&lt;br&gt;
+期待与您成为朋友！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VUE2学习记录(一)</title>
+      <link>http://liuys.me/blog/vue-study-1/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://liuys.me/blog/vue-study-1/</guid>
+      <description>
+
+&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;学习过程中的项目,是使用vue-cli 2.2的手脚架项目.&lt;/p&gt;
+
+&lt;p&gt;介绍一下 项目目录结构:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- build				// webpack 配置
+|-- config				// 环境参数
+|-- src					// 源码
+|   |-- assets	
+|   |-- components	// 组件目录
+|   |-- router		// 路由
+|   |-- App.vue		// vue 根模块
+|   `-- main.js		// 主入口js文件
+|-- static			// 静态资源目录
+|-- test				// 单元测试目录
+|-- index.html		// 主页
+|-- package.json		// 项目依赖
+`-- README.md	
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2016-01-离开工作四年的公司-只为了离家更近&#34;&gt;2016-01，离开工作四年的公司，只为了离家更近！&lt;/h3&gt;
+
+&lt;p&gt;很想念新疆的蓝天，没有雾霾的日子，想念滑雪一圈几公里的快感！&lt;br&gt;
+问候一句曾经的兄弟们，你们还好吗？&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>逝去的2016，你收获了什么？</title>
@@ -316,35 +385,6 @@ document.body.addEventListener(&#39;touchend&#39;, function () { });
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;[^本文摘自互联网，以及工作中遇到的问题和处理过程]&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>关于我</title>
-      <link>http://liuys.me/about/</link>
-      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
-      
-      <guid>http://liuys.me/about/</guid>
-      <description>
-
-&lt;h2 id=&#34;i-class-fa-fa-user-i-个人说明&#34;&gt;&lt;i class=&#34;fa fa-user&#34;&gt;&lt;/i&gt; 个人说明&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;刘岩松&lt;/strong&gt;，1988年出生，热爱互联网技术，《大众软件》是我的第一任计算机老师，看过的兄弟你们懂的~；喜欢逻辑性强的东西（数学，物理，化学）；大学专业是化学，从事过一段化工行业的工作，但是对计算机的热情从未减弱，一直自学计算机技术；自学WEB技术后，一直从事前端工作；熟练使用&lt;strong&gt;HTML5&lt;/strong&gt;，&lt;strong&gt;CSS3&lt;/strong&gt;，&lt;strong&gt;JavaScript&lt;/strong&gt;，以及&lt;strong&gt;AngularJs&lt;/strong&gt;，&lt;strong&gt;Vue.js&lt;/strong&gt;等MVVM框架，&lt;strong&gt;jquery&lt;/strong&gt;，&lt;strong&gt;zepto&lt;/strong&gt;等热门JS库；熟悉&lt;strong&gt;ES6&lt;/strong&gt;新语法规范（现在用&lt;strong&gt;ES6&lt;/strong&gt;语法规范来完成工作需求），喜欢并且熟练使用Gulp，Grunt，Webpack等前端自动化工具（懒&amp;hellip;）;后端技术，熟悉&lt;strong&gt;NodeJS&lt;/strong&gt;（写过项目，继续完善中&amp;hellip;），&lt;strong&gt;PHP&lt;/strong&gt;(最好的语言，你懂的)，&lt;strong&gt;Golang&lt;/strong&gt;（语法简单，非常适合高并发处理）；还会熟练使用&lt;strong&gt;Photoshop&lt;/strong&gt;；本人喜欢研究“技（zhuang）术（bi）”，希望认认识热爱技术的朋友！&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;i-class-fa-fa-bullhorn-i-博客说明&#34;&gt;&lt;i class=&#34;fa fa-bullhorn&#34;&gt;&lt;/i&gt; 博客说明&lt;/h2&gt;
-
-&lt;p&gt;一句话，岁数大了记性不好（23333）；开个玩笑，把博客当作笔记，作为一种积累，时不时的看看自己最近有什么收获；每个阶段对于知识的理解程度都不相同，希望通过写博客的过程再学习一遍，同时也可以分享给需要的人（欢迎指正错误）；本博客使用&lt;a href=&#34;https://www.gohugo.io/&#34;&gt;Hugo&lt;/a&gt;搭建;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;i-class-fa-fa-phone-i-与我联系&#34;&gt;&lt;i class=&#34;fa fa-phone&#34;&gt;&lt;/i&gt; 与我联系&lt;/h2&gt;
-
-&lt;p&gt;&lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt; : &lt;a href=&#34;mailto://kntt9968@gmail.com&#34;&gt;kntt9968@gmail.com&lt;/a&gt;&lt;br&gt;
-&lt;i class=&#34;fa fa-send&#34;&gt;&lt;/i&gt;：&lt;a href=&#34;http://liuys.me&#34;&gt;http://liuys.me&lt;/a&gt;&lt;br&gt;
-&lt;i class=&#34;fa fa-qq&#34;&gt;&lt;/i&gt; : 76701782&lt;br&gt;
-期待与您成为朋友！&lt;/p&gt;
 </description>
     </item>
     

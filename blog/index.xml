@@ -2,12 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Kntt&#39;s Blog</title>
-    <link>http://liuys.me/blog/</link>
+    <link>http://liuys.me/blog/index.xml</link>
     <description>Recent content in Blogs on Kntt&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 04 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://liuys.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>VUE2学习记录(一)</title>
+      <link>http://liuys.me/blog/vue-study-1/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://liuys.me/blog/vue-study-1/</guid>
+      <description>
+
+&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+
+&lt;p&gt;学习过程中的项目,是使用vue-cli 2.2的手脚架项目.&lt;/p&gt;
+
+&lt;p&gt;介绍一下 项目目录结构:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- build				// webpack 配置
+|-- config				// 环境参数
+|-- src					// 源码
+|   |-- assets	
+|   |-- components	// 组件目录
+|   |-- router		// 路由
+|   |-- App.vue		// vue 根模块
+|   `-- main.js		// 主入口js文件
+|-- static			// 静态资源目录
+|-- test				// 单元测试目录
+|-- index.html		// 主页
+|-- package.json		// 项目依赖
+`-- README.md	
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2016-01-离开工作四年的公司-只为了离家更近&#34;&gt;2016-01，离开工作四年的公司，只为了离家更近！&lt;/h3&gt;
+
+&lt;p&gt;很想念新疆的蓝天，没有雾霾的日子，想念滑雪一圈几公里的快感！&lt;br&gt;
+问候一句曾经的兄弟们，你们还好吗？&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>逝去的2016，你收获了什么？</title>
