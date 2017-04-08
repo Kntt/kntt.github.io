@@ -17,35 +17,307 @@
       <guid>http://liuys.me/blog/vue-study-1/</guid>
       <description>
 
-&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;vue2.0来了已经有一段时间了,一直也没好好的看一下2.0的改动, 刚好最近开始使用. 自己也就重新再撸一遍知识点,顺带整&lt;/p&gt;
+
+&lt;p&gt;理一下自己的学习过程,过程中对于 2.0的不同说下自己的理解,若有不对的地方,还望留言指正,共同进步!&lt;/p&gt;
 
 &lt;p&gt;学习过程中的项目,是使用vue-cli 2.2的手脚架项目.&lt;/p&gt;
 
 &lt;p&gt;介绍一下 项目目录结构:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;.
-|-- build				// webpack 配置
-|-- config				// 环境参数
-|-- src					// 源码
+|-- build		// webpack 配置
+|-- config		// 环境参数
+|-- src			// 源码
 |   |-- assets	
 |   |-- components	// 组件目录
 |   |-- router		// 路由
 |   |-- App.vue		// vue 根模块
 |   `-- main.js		// 主入口js文件
-|-- static			// 静态资源目录
-|-- test				// 单元测试目录
+|-- static		// 静态资源目录
+|-- test		// 单元测试目录
 |-- index.html		// 主页
-|-- package.json		// 项目依赖
+|-- package.json	// 项目依赖
 `-- README.md	
 
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;下面开始学习过程:&lt;/p&gt;
+
 &lt;hr /&gt;
 
-&lt;h3 id=&#34;2016-01-离开工作四年的公司-只为了离家更近&#34;&gt;2016-01，离开工作四年的公司，只为了离家更近！&lt;/h3&gt;
+&lt;h2 id=&#34;模版语法&#34;&gt;模版语法&lt;/h2&gt;
 
-&lt;p&gt;很想念新疆的蓝天，没有雾霾的日子，想念滑雪一圈几公里的快感！&lt;br&gt;
-问候一句曾经的兄弟们，你们还好吗？&lt;/p&gt;
+&lt;h3 id=&#34;1-文本&#34;&gt;1.文本&lt;/h3&gt;
+
+&lt;p&gt;数据绑定最常用都语法之一, &amp;ldquo;Mustache&amp;rdquo;语法(双大括号)插值&lt;/p&gt;
+
+&lt;p&gt;对于文本数据的绑定,使用场景太多了,是最基础的用法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;hello {{world}}&amp;lt;/p&amp;gt;
+        &amp;lt;p v-text=&amp;quot;&#39;hello &#39; + world&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;{{`hello ${world}`}}&amp;lt;/p&amp;gt;
+        &amp;lt;p v-text=&amp;quot;`hello ${world}`&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;button @click=&amp;quot;world=&#39;vue2.0&#39;&amp;quot;&amp;gt;改变wrold值&amp;lt;/button&amp;gt;
+     &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+export default {
+     data () {
+         return {
+              world : &amp;quot;world&amp;quot;
+         }
+     }
+}
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上面的demo使用了四种绑定文本的语法&lt;/p&gt;
+
+&lt;p&gt;第一:&amp;ldquo;Mustache&amp;rdquo;语法 &lt;code&gt;{{world}}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;第二: &lt;code&gt;v-text&lt;/code&gt;指令&lt;/p&gt;
+
+&lt;p&gt;第三和第四是对第一第二两种写法的 ES6 语法扩展;&lt;/p&gt;
+
+&lt;p&gt;这种语法绑定方式,会一直监听 world 的值, worl的值变化时候,页面也随之刷新;&lt;/p&gt;
+
+&lt;p&gt;还有下面一种绑定方法, 一次性绑定, 不会继续监听&lt;/p&gt;
+
+&lt;h3 id=&#34;2-v-once&#34;&gt;2.v-once&lt;/h3&gt;
+
+&lt;p&gt;该赋值指令, 只对文本进行一次赋值, 赋值完成后不会继续监听该值的变化. 对于特定的场景是非常好用的指令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;hello {{world}}&amp;lt;/p&amp;gt;
+        &amp;lt;p v-text=&amp;quot;&#39;hello &#39; + world&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;p v-once=&amp;quot;`hello ${world}`&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;button @click=&amp;quot;world=&#39;vue2.0&#39;&amp;quot;&amp;gt;改变wrold值&amp;lt;/button&amp;gt;
+     &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+export default {
+     data () {
+         return {
+              world : &amp;quot;world&amp;quot;
+         }
+     }
+}
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;同样通过上一个demo,稍作修改就可以体验下该指令;&lt;/p&gt;
+
+&lt;p&gt;点击按钮的时候 通过&lt;code&gt;{{}}&lt;/code&gt; 和 &lt;code&gt;v-text&lt;/code&gt; 绑定的 world 会改变,而 &lt;code&gt;v-once&lt;/code&gt; 绑定则保持不变;&lt;/p&gt;
+
+&lt;h3 id=&#34;3-绑定html原文&#34;&gt;3.绑定HTML原文&lt;/h3&gt;
+
+&lt;p&gt;有些特定场景需要 绑定html原文, 而&lt;code&gt;{{}}&lt;/code&gt;和 &lt;code&gt;v-text&lt;/code&gt; 两种绑定方法会把原文当作文本解析.&lt;/p&gt;
+
+&lt;p&gt;所以 vue 提供了另一个指令 &lt;code&gt;v-html&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;同样用前面的demo稍作修改:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p v-text=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;p v-html=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+     &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+export default {
+     data () {
+         return {
+              html : `&amp;lt;span style=&amp;quot;color:blue&amp;quot;&amp;gt;我是蓝色的&amp;lt;/span&amp;gt;`
+         }
+     }
+}
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我们可以清楚的看到通过&lt;code&gt;v-text&lt;/code&gt;绑定的html, 直接把标签当作文本解析了,&lt;/p&gt;
+
+&lt;p&gt;通过&lt;code&gt;v-html&lt;/code&gt;绑定的html, 则把html正常解析了, 文字也显示为蓝色.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-属性绑定&#34;&gt;4.属性绑定&lt;/h3&gt;
+
+&lt;p&gt;vue中非常重要的一个用法,组件中传递!对于属性的绑定我们不能使用&lt;code&gt;{{attr}}&lt;/code&gt;语法,同样vue提供给了属性绑定指令&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;v-bind:attr=&amp;quot;attr&amp;quot;&lt;/code&gt; 对应语法糖 &lt;code&gt;:attr=&amp;quot;attr&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;简单的应用场景:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+    &amp;lt;div&amp;gt;
+    	&amp;lt;span v-bind:id=&amp;quot;id&amp;quot;&amp;gt;id&amp;lt;/span&amp;gt;
+    	&amp;lt;a :href=&amp;quot;href&amp;quot;&amp;gt;vue&amp;lt;/a&amp;gt;
+    	&amp;lt;img :src=&amp;quot;img&amp;quot; alt=&amp;quot;image&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+export default {
+     data () {
+         return {
+              id: &#39;vue&#39;,
+              href: &#39;https://cn.vuejs.org&#39;,
+              img: &#39;https://cn.vuejs.org/images/logo.png&#39;
+         }
+     }
+}
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;属性中支持number string boolean类型，不用&lt;code&gt;:&lt;/code&gt;来绑定的属性可以直接属性赋值(换句话说,如果不是需要动态赋值的属&lt;/p&gt;
+
+&lt;p&gt;性,可以直接按照html语法的属性写)，如果需要动态改变属性值(通过&lt;code&gt;data数据中返回的属性变量&lt;/code&gt;)一定要使用&lt;code&gt;:&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;5-使用javascript表达式&#34;&gt;5.使用JavaScript表达式&lt;/h3&gt;
+
+&lt;p&gt;vue 绑定语法&lt;code&gt;{{}}&lt;/code&gt;支持JavaScript表达式(简单的运算,不支持流程控制的语法)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+     &amp;lt;div&amp;gt;
+        &amp;lt;div id=&amp;quot;method1&amp;quot;&amp;gt;
+            &amp;lt;p&amp;gt;{{ count &amp;lt; 0 ? &#39;+&#39; : &#39;-&#39;}} {{count + 1}}&amp;lt;/p&amp;gt;
+            &amp;lt;button @click=&#39;count ++&#39;&amp;gt;增加&amp;lt;/button&amp;gt;
+            &amp;lt;button @click=&#39;count --&#39;&amp;gt;减少&amp;lt;/button&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div id=&amp;quot;method2&amp;quot;&amp;gt;
+            &amp;lt;input type=&amp;quot;text&amp;quot; v-model=&#39;message&#39;&amp;gt;
+            &amp;lt;h1&amp;gt;{{ message.split(&#39;&#39;).reverse().join(&#39;&#39;) }}&amp;lt;/h1&amp;gt;
+        &amp;lt;/div&amp;gt;
+     &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+
+export default {
+     data () {
+         return {
+              count : 0,
+              message : &amp;quot;&amp;quot;
+         }
+     }
+}
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用中,如果是特别复杂的算法,建议通过method或者filter来计算;&lt;/p&gt;
+
+&lt;h3 id=&#34;6-修饰符&#34;&gt;6.修饰符&lt;/h3&gt;
+
+&lt;p&gt;修饰符（Modifiers）是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定.&lt;/p&gt;
+
+&lt;p&gt;对于vue绑定的事件, 可以提前通过修饰符限制事件方法执行的过程&lt;/p&gt;
+
+&lt;p&gt;例如: 通过 &lt;code&gt;click.prevent&lt;/code&gt; 来阻止默认行为&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+     &amp;lt;div&amp;gt;
+         &amp;lt;a href=&amp;quot;https://www.baidu.com&amp;quot; @click.prevent=&amp;quot;click&amp;quot;&amp;gt;baidu&amp;lt;/my-button&amp;gt;
+     &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+export default {
+     methods : {
+         click () {
+             alert(&amp;quot;阻止a标签的默认行为 .prevent&amp;quot;)
+         }
+     }
+}
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;再有: 通过 &lt;code&gt;v-model.trim&lt;/code&gt; 来去掉value的空格&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;template&amp;gt;
+     &amp;lt;div&amp;gt;
+        &amp;lt;input type=&amp;quot;text&amp;quot; v-model.trim=&amp;quot;content&amp;quot;&amp;gt;
+        &amp;lt;input type=&amp;quot;text&amp;quot; v-model = &#39;content&#39;&amp;gt;
+     &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+export default {
+     data () {
+         return {
+             content : &amp;quot;&amp;quot;
+         }
+     }
+}
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;7-过滤器&#34;&gt;7.过滤器&lt;/h3&gt;
+
+&lt;p&gt;Vue.js 允许你自定义过滤器，可被用作一些常见的文本格式化。过滤器可以用在两个地方：mustache 插值和 v-bind 表达&lt;/p&gt;
+
+&lt;p&gt;式。过滤器应该被添加在 JavaScript 表达式的尾部，由“管道”符指示：&lt;/p&gt;
+
+&lt;p&gt;在v-bind中也就是2.10的时候才支持这个功能，这个大家要对这个版本有一定的了解，正确的使用&lt;/p&gt;
+
+&lt;p&gt;应用场景 ：
+把 账单金额格式化为&lt;code&gt;$100,000.00&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;lt;template&amp;gt;
+     &amp;lt;div&amp;gt;
+         &amp;lt;p&amp;gt;{{money | currency}}&amp;lt;/p&amp;gt;
+     &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+export default {
+     data () {
+         return {
+             telephone : 10000
+         }
+     },
+     filter: {
+     	currency (value) {
+  		let money = value * 1
+  		if( !!isNaN(money)) money = 0;
+  		money.toLocaleString(&#39;en-IN&#39;, {
+  			style: &#39;currency&#39;,
+  			currency: &#39;CNY&#39;
+		});
+		return money
+	   }
+     }
+}
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;8.语法糖&lt;/p&gt;
+
+&lt;p&gt;vue中常用的语法糖&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;v-on:click&lt;/code&gt; = &lt;code&gt;@click&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;v-bind:src&lt;/code&gt; = &lt;code&gt;:src&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;模版语法基础知识,是开发中最常用的, 要灵活的使用!&lt;/p&gt;
 </description>
     </item>
     
