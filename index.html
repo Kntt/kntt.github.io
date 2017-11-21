@@ -439,24 +439,20 @@
     
         <article class="post">
         <h3>评论：</h3>
-            
-<div class="ds-thread" data-thread-key="1" data-title="逝去的2016，你收获了什么？" data-url="http://liuys.me/blog/2016-final/"></div>
-
-
-
-<script type="text/javascript">
-    var duoshuoQuery = {short_name:"kntt" };
-
-    (function() {
-     var ds = document.createElement('script');
-     ds.type = 'text/javascript';ds.async = true;
-     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-     ds.charset = 'UTF-8';
-     (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-     })();
+            <div id="comments-container"></div>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: 'Kntt',
+  repo: 'blog-comment',
+  oauth: {
+    client_id: '27aecdee4e9ffa64714d',
+    client_secret: 'a64ec5117efc783ddf1f1d79ba30822d9640d0f0',
+  },
+})
+gitment.render('comments-container')
 </script>
-
         </article>
     
 
