@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HTML5 on Kntt&#39;s Blog</title>
-    <link>http://liuys.me/categories/html5/</link>
+    <link>http://liuys.me/categories/html5/index.xml</link>
     <description>Recent content in HTML5 on Kntt&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 20 Sep 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://liuys.me/categories/html5/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://liuys.me/categories/html5/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>移动端网页布局方法总结</title>
@@ -17,14 +14,246 @@
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/mobile-resove/</guid>
-      <description>1. 移动端，a、input标签被点击时查实的半透明灰色背景 描述：发生在wp操作系统中
-&amp;lt;meta name=&amp;quot;msapplication-tap-highlight&amp;quot; content=&amp;quot;no&amp;quot;&amp;gt;  2.关闭IOS键盘首字母大写 描述：
-&amp;lt;input type=&amp;quot;text&amp;quot; autocapitalize=&amp;quot;off&amp;quot; /&amp;gt;  3.禁止文本缩放 描述：
-html { -webkit-text-size-adjust: 100%; }  4.清除输入框内阴影 描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除
-input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数字为电话，忽略email 描述：
-&amp;lt;meta name=&amp;quot;format-detection&amp;quot; content=&amp;quot;telephone=no, email=no&amp;quot;/&amp;gt;  6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
-.xxx { overflow: auto; -webkit-overflow-scrolling: touch; }  7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;
-.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &amp;lt;any onselectstart=&amp;quot;return false;&amp;quot; unselectable=&amp;quot;on&amp;quot;&amp;gt;&amp;lt;/any&amp;gt;  8.</description>
+      <description>
+
+&lt;h3 id=&#34;1-移动端-a-input标签被点击时查实的半透明灰色背景&#34;&gt;1. 移动端，a、input标签被点击时查实的半透明灰色背景&lt;/h3&gt;
+
+&lt;p&gt;描述：发生在wp操作系统中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;msapplication-tap-highlight&amp;quot; content=&amp;quot;no&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2-关闭ios键盘首字母大写&#34;&gt;2.关闭IOS键盘首字母大写&lt;/h3&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;text&amp;quot; autocapitalize=&amp;quot;off&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;3-禁止文本缩放&#34;&gt;3.禁止文本缩放&lt;/h3&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;html {
+    -webkit-text-size-adjust: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;4-清除输入框内阴影&#34;&gt;4.清除输入框内阴影&lt;/h3&gt;
+
+&lt;p&gt;描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;input,
+textarea {
+    border: 0;
+    -webkit-appearance: none;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;5-忽略页面的数字为电话-忽略email&#34;&gt;5.忽略页面的数字为电话，忽略email&lt;/h3&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&amp;quot;format-detection&amp;quot; content=&amp;quot;telephone=no, email=no&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;6-快速回弹滚动&#34;&gt;6.快速回弹滚动&lt;/h3&gt;
+
+&lt;p&gt;描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.xxx {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;7-禁止选中内容&#34;&gt;7.禁止选中内容&lt;/h3&gt;
+
+&lt;p&gt;描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.user-select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+// 兼容ie6-9
+&amp;lt;any onselectstart=&amp;quot;return false;&amp;quot; unselectable=&amp;quot;on&amp;quot;&amp;gt;&amp;lt;/any&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;8-移动端取消touch高亮效果&#34;&gt;8.移动端取消touch高亮效果&lt;/h3&gt;
+
+&lt;p&gt;描述：移动端页面，所有a标签在触发点击时或者所有设置了伪类 :active 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过css以下方法来禁止：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.xxx {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;9-移动端禁止保存或拷贝图像&#34;&gt;9.移动端禁止保存或拷贝图像&lt;/h3&gt;
+
+&lt;p&gt;描述：手机或者pad上长按图像 img ，会弹出选项 存储图像 或者 拷贝图像，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：（IOS有效）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;img {
+    -webkit-touch-callout: none;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;10-解决字体在移动端比例缩小后出现锯齿的问题&#34;&gt;10.解决字体在移动端比例缩小后出现锯齿的问题&lt;/h3&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;html {
+    -webkit-font-smoothing: antialiased;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;11-box-sizing-border-box-改变盒子模型的计算方式&#34;&gt;11.box-sizing：border-box；改变盒子模型的计算方式&lt;/h3&gt;
+
+&lt;p&gt;描述：不仅仅是移动端应用，响应式页面都这么玩，根据需要给元素设置，*只代表元素；&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* {
+    box-sizing：border-box；
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;12-按钮被按下效果&#34;&gt;12.按钮被按下效果&lt;/h3&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;button:active  {
+    按下样式；
+}
+document.body.addEventListener(&#39;touchend&#39;, function () { });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;13-按钮被按下效果&#34;&gt;13.按钮被按下效果&lt;/h3&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;button:active  {
+    按下样式；
+}
+document.body.addEventListener(&#39;touchend&#39;, function () { });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;14-设置input里面placeholder字体的大小&#34;&gt;14.设置input里面placeholder字体的大小&lt;/h3&gt;
+
+&lt;p&gt;描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;::-webkit-input-placeholder{ font-size:10pt;}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;15-移动端-图片技巧&#34;&gt;15.移动端，图片技巧&lt;/h3&gt;
+
+&lt;p&gt;描述：记得加上display：block；属性来解决img的边缘空白间隙的1px像素。 图片要适应不同的手机要设置width:100%;而且不能添加高度。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;img{
+    display:block
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;16-audio元素和video元素在ios和android中无法自动播放&#34;&gt;16.audio元素和video元素在IOS和Android中无法自动播放&lt;/h3&gt;
+
+&lt;p&gt;描述：可以做成触屏就播放，来解决&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&#39;html&#39;).one(&#39;touchstart&#39;,function(){
+    audio.play()
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;17-消除transition闪屏&#34;&gt;17.消除transition闪屏&lt;/h3&gt;
+
+&lt;p&gt;描述：可以开启硬件加速，见18&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.css{
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;18-开启硬件加速-解决页面闪白-保证动画流畅&#34;&gt;18.开启硬件加速，解决页面闪白，保证动画流畅&lt;/h3&gt;
+
+&lt;p&gt;描述：设计高性能CSS3动画的几个要素，尽可能地使用合成属性transform和opacity来设计CSS3动画，不使用position的left和top来定位，&lt;strong&gt;利用translate3D开启GPU加速&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.css {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;19-针对适配等比缩放的方法&#34;&gt;19.针对适配等比缩放的方法&lt;/h3&gt;
+
+&lt;p&gt;描述：神器~&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@media only screen and (min-width: 1024px){
+    body{zoom:3.2;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body{zoom:2.4;}
+}
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    body{zoom:2;}
+}
+@media only screen and (min-width: 540px) and (max-width: 639px) {
+    body{zoom:1.68;}
+}
+@media only screen and (min-width: 480px) and (max-width: 539px) {
+    body{zoom:1.5;}
+}
+@media only screen and (min-width: 414px) and (max-width: 479px) {
+    body{zoom:1.29;}
+}
+@media only screen and (min-width: 400px) and (max-width: 413px) {
+    body{zoom:1.25;}
+}
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+    body{zoom:1.17;}
+}
+@media only screen and (min-width: 360px) and (max-width:374px) {
+    body{zoom:1.125;}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[^本文摘自互联网，以及工作中遇到的问题和处理过程]&lt;/p&gt;
+</description>
     </item>
     
   </channel>

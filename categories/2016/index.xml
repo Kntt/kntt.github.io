@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2016 on Kntt&#39;s Blog</title>
-    <link>http://liuys.me/categories/2016/</link>
+    <link>http://liuys.me/categories/2016/index.xml</link>
     <description>Recent content in 2016 on Kntt&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 04 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://liuys.me/categories/2016/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://liuys.me/categories/2016/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>逝去的2016，你收获了什么？</title>
@@ -17,26 +14,60 @@
       <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/2016-final/</guid>
-      <description>生命的旅途，一程有一程的风景。回看2016年，曾经的片段，总有一些bug，会停留在JIRA上;总有一些技术，静静的停留在计划中。这一年经历了哪些，学会了什么?
-2016-01，离开工作四年的公司，只为了离家更近！ 很想念新疆的蓝天，没有雾霾的日子，想念滑雪一圈几公里的快感！
-问候一句曾经的兄弟们，你们还好吗？
-2016-02 —— 2016-04，回到北京，进入现在的公司！ 回来做的第一个项目：微信点餐系统（名字就不说了）
-期间：印象最深刻的一个思想——去中心化的O2O！
-也是正式开始写移动端页面。
-以前一直写的管理后台，移动端项目接触的非常少，开始写移动端的时候遇到过很多坑，前一篇文章就是填坑过程中总结的一些东西。当然不仅仅是这些坑，还有一些是真的忘了（0.0好了伤疤忘了疼）。这一阶段收获还是蛮多的，特别是移动端的一些技巧！后面有时间再整理一些 这个项目的后端语言是Go，从最开始接触的.NET，JAVA，到后来自学的Node，PHP， Go是我最近最感兴趣的，建议有经历的朋友可以学学，语法非常简单，开发速度最快的编译型语言（不知道是不是之一）。都说处理高并发非常厉害，作为一个前端我是真看不出来，嘿嘿！
-最重要的收获：对于微信JSDK，有了非常熟练的掌握
-2016-05 —— 2016-08，回到老本行，管理后台！ 与之前不同的地方，这次是 angular + webpack 构建的后台项目
-收获：
-1. 通过自己编写directive，对angular的指令有了更深刻的了解。这也是angular的乐趣之一
-2. 编写service，学到了一种angular思想，controller只处理逻辑问题，传输数据，用户信息，用户权限等操作，尽可能的放在service 里面完成
-3. webpack的乐趣，使用插件来提高开发效率，掌握前端自动化工具，为了更好的专注于前端本身
-4. 使用了MVC框架之后，发现特别的不喜欢频繁的操作DOM了，这也是我学些VUE的一个动力！
-5. 自学VUE，自己写了一个微信打卡的小项目，使用价值不高，只是单纯的为了学习VUE。后面共享到Github供大家参考!
-2016-09，发现Hugo，搭建自己的博客！ 很早就有搭建博客的想法，最开始看的是Hexo，总觉得不是自己的菜。直到发现hugo，是真的喜欢！如果你也在寻找，不妨试一试，有什么问题可以留言，一起探讨！
-2016-10 —— 2016-12，开始关注angular2，TypeScript 写angular1项目，组件化的思想开始进入我的视线！到自学VUE，再次看到组件化的思想，让我正视前端的发展方向！回想以前常用的CV大法，发现确实是非常稚嫩。因此我的目光开始关注这方面的技术，一切皆组件，angular2也是在这个时候进入我的学习计划中。写ng1项目时候，社区里面反应的弊端，大部分我都遇到过，因此对于ng2的期望是非常的高，它也没有让我失望！学习ng2，自然少不了ts了，这个JavaScript的超集，解决了js的大部分诟病，更彻底将js转变为面向对象的开发方式（类java），学过java的上手回非常快，希望可以有一起学习的朋友！
-最后 2016算是一个满意的结束，成绩不多，也没有什么遗憾！
-2017年的第一个目标，继续学习Typescript，写一个自己的ng2项目！
-2016最重要的收获是，认识了她！以后最大的目标就是：让你过的幸福！！！ 加油</description>
+      <description>
+
+&lt;p&gt;生命的旅途，一程有一程的风景。回看2016年，曾经的片段，总有一些bug，会停留在JIRA上;总有一些技术，静静的停留在计划中。这一年经历了哪些，学会了什么?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2016-01-离开工作四年的公司-只为了离家更近&#34;&gt;2016-01，离开工作四年的公司，只为了离家更近！&lt;/h3&gt;
+
+&lt;p&gt;很想念新疆的蓝天，没有雾霾的日子，想念滑雪一圈几公里的快感！&lt;br&gt;
+问候一句曾经的兄弟们，你们还好吗？&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2016-02-2016-04-回到北京-进入现在的公司&#34;&gt;2016-02 —— 2016-04，回到北京，进入现在的公司！&lt;/h3&gt;
+
+&lt;p&gt;回来做的第一个项目：微信点餐系统（名字就不说了）&lt;br&gt;
+期间：印象最深刻的一个思想——去中心化的O2O！&lt;br&gt;
+也是正式开始写移动端页面。&lt;br&gt;
+以前一直写的管理后台，移动端项目接触的非常少，开始写移动端的时候遇到过很多坑，前一篇文章就是填坑过程中总结的一些东西。当然不仅仅是这些坑，还有一些是真的忘了（0.0好了伤疤忘了疼）。这一阶段收获还是蛮多的，特别是移动端的一些技巧！后面有时间再整理一些
+这个项目的后端语言是Go，从最开始接触的.NET，JAVA，到后来自学的Node，PHP， Go是我最近最感兴趣的，建议有经历的朋友可以学学，语法非常简单，开发速度最快的编译型语言（不知道是不是之一）。都说处理高并发非常厉害，作为一个前端我是真看不出来，嘿嘿！&lt;br&gt;
+最重要的收获：对于&lt;strong&gt;微信JSDK&lt;/strong&gt;，有了非常熟练的掌握&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2016-05-2016-08-回到老本行-管理后台&#34;&gt;2016-05 —— 2016-08，回到老本行，管理后台！&lt;/h3&gt;
+
+&lt;p&gt;与之前不同的地方，这次是 &lt;strong&gt;angular&lt;/strong&gt; + &lt;strong&gt;webpack&lt;/strong&gt; 构建的后台项目&lt;br&gt;
+收获：&lt;br&gt;
+1. 通过自己编写directive，对angular的指令有了更深刻的了解。这也是angular的乐趣之一&lt;br&gt;
+2. 编写service，学到了一种angular思想，controller只处理逻辑问题，传输数据，用户信息，用户权限等操作，尽可能的放在service   里面完成&lt;br&gt;
+3. webpack的乐趣，使用插件来提高开发效率，掌握前端自动化工具，为了更好的专注于前端本身&lt;br&gt;
+4. 使用了MVC框架之后，发现特别的不喜欢频繁的操作DOM了，这也是我学些VUE的一个动力！&lt;br&gt;
+5. 自学&lt;strong&gt;VUE&lt;/strong&gt;，自己写了一个微信打卡的小项目，使用价值不高，只是单纯的为了学习&lt;strong&gt;VUE&lt;/strong&gt;。后面共享到Github供大家参考!&lt;br&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2016-09-发现hugo-搭建自己的博客&#34;&gt;2016-09，发现Hugo，搭建自己的博客！&lt;/h3&gt;
+
+&lt;p&gt;很早就有搭建博客的想法，最开始看的是Hexo，总觉得不是自己的菜。直到发现hugo，是真的喜欢！如果你也在寻找，不妨试一试，有什么问题可以留言，一起探讨！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;2016-10-2016-12-开始关注angular2-typescript&#34;&gt;2016-10 —— 2016-12，开始关注angular2，TypeScript&lt;/h3&gt;
+
+&lt;p&gt;写angular1项目，组件化的思想开始进入我的视线！到自学VUE，再次看到组件化的思想，让我正视前端的发展方向！回想以前常用的CV大法，发现确实是非常稚嫩。因此我的目光开始关注这方面的技术，一切皆组件，angular2也是在这个时候进入我的学习计划中。写ng1项目时候，社区里面反应的弊端，大部分我都遇到过，因此对于ng2的期望是非常的高，它也没有让我失望！学习ng2，自然少不了ts了，这个JavaScript的超集，解决了js的大部分诟病，更彻底将js转变为面向对象的开发方式（类java），学过java的上手回非常快，希望可以有一起学习的朋友！&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;最后&#34;&gt;最后&lt;/h3&gt;
+
+&lt;p&gt;2016算是一个满意的结束，成绩不多，也没有什么遗憾！&lt;br&gt;
+2017年的第一个目标，继续学习&lt;strong&gt;Typescript&lt;/strong&gt;，写一个自己的ng2项目！&lt;br&gt;
+&lt;span style=&#34;color:#fff&#34;&gt;2016最重要的收获是，认识了她！以后最大的目标就是：让你过的幸福！！！ 加油&lt;/span&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

@@ -1,19 +1,11 @@
-
-
-
-    
-        
-    
-
-
-
-
 <!DOCTYPE HTML>
 
 <html>
     <head>
         
-            <title>CSS3 Posts - Kntt&#39;s Blog</title>
+            
+                <title>[Flutter-前端视角]dart语言学习笔记（1）</title>
+            
         
 
         <meta charset="utf-8" />
@@ -24,35 +16,54 @@
 
 
         
+            <meta name="author" content="Kntt">
         
-            
-                <meta name="description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端">
-            
         
-
+            <meta name="description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～">
         
-        <meta property="og:title" content="CSS3" />
-<meta property="og:description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://liuys.me/categories/css3/" />
-
-
-
-<meta property="og:updated_time" content="2016-09-20T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
 
         
-<meta itemprop="name" content="CSS3">
-<meta itemprop="description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端">
 
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="[Flutter-前端视角]dart语言学习笔记（1）"/>
+<meta name="twitter:title" content="[Flutter-前端视角]dart语言学习笔记（1）"/>
+<meta name="twitter:description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～"/>
+
+
+        <meta property="og:title" content="[Flutter-前端视角]dart语言学习笔记（1）" />
+<meta property="og:description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://liuys.me/blog/flutter-dart-1/" />
+
+
+
+<meta property="article:published_time" content="2018-08-06T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-08-06T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="[Flutter-前端视角]dart语言学习笔记（1）">
+<meta itemprop="description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～">
+
+
+<meta itemprop="dateModified" content="2018-08-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="83">
+
+
+
+<meta itemprop="keywords" content="2016,2018,CSS3,HTML5,dart,flutter," />
 
         
 
@@ -85,6 +96,7 @@
         
         <div id="wrapper">
 
+    
     
 <header id="header">
     
@@ -126,6 +138,10 @@
     </nav>
     <nav class="main">
         <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
             
             <li class="search">
                 <a class="fa-search" href="#search">Search</a>
@@ -239,19 +255,73 @@
         
 </section>
 
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&text=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&title=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&title=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&title=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Kntt&body=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
     
     <div id="main">
-        <h1>CSS3</h1>
         
         
-            <article class="post">
+        <article class="post">
     <header>
     <div class="title">
         
-            <h2><a href="http://liuys.me/blog/mobile-resove/">移动端网页布局方法总结</a></h2>
+            <h1><a href="http://liuys.me/blog/flutter-dart-1/">[Flutter-前端视角]dart语言学习笔记（1）</a></h1>
+            
         
         
-            <p>移动端网页布局中需要注意事项以及解决方法总结</p>
+            <p>学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～</p>
         
     </div>
     <div class="meta">
@@ -260,16 +330,65 @@
         
 
         <time class="published"
-            datetime='2016-09-20'>
-            September 20, 2016</time>
+            datetime='2018-08-06'>
+            August 6, 2018</time>
         <span class="author">Kntt</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
 </header>
 
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&text=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&title=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&title=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f&title=%5bFlutter-%e5%89%8d%e7%ab%af%e8%a7%86%e8%a7%92%5ddart%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%881%ef%bc%89" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Kntt&body=http%3a%2f%2fliuys.me%2fblog%2fflutter-dart-1%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
     
     
 
@@ -288,28 +407,60 @@
 
         
 
-        <a href="http://liuys.me/blog/mobile-resove/" class="image featured">
-            <img src="/img/2016/09/2016-09.png" alt="" />
+        <a href="http://liuys.me/blog/flutter-dart-1/" class="image featured">
+            <img src="/img/2018/08/2018-08-06.png" alt="" />
         </a>
     
 
 
-    <p><ol>
-<li>移动端，a、input标签被点击时查实的半透明灰色背景 描述：发生在wp操作系统中
-&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;  2.关闭IOS键盘首字母大写 描述：
-&lt;input type=&quot;text&quot; autocapitalize=&quot;off&quot; /&gt;  3.禁止文本缩放 描述：
-html { -webkit-text-size-adjust: 100%; }  4.清除输入框内阴影 描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除
-input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数字为电话，忽略email 描述：
-&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no, email=no&quot;/&gt;  6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
-.xxx { overflow: auto; -webkit-overflow-scrolling: touch; }  7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;
-.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &lt;any onselectstart=&quot;return false;&quot; unselectable=&quot;on&quot;&gt;&lt;/any&gt;  8.</li>
+    <div id="content">
+        
+
+<h4 id="一-基础数据类型-一切皆对象">一. 基础数据类型 - 一切皆对象</h4>
+
+<ul>
+<li>Numbers</li>
+<li>Strings</li>
+<li>Booleans</li>
+<li>Lists</li>
+<li>Maps</li>
+<li>Runes (用于在字符串中表示 Unicode 字符) &ndash; 后面继续看</li>
+<li>Symbols</li>
+</ul>
+
+<hr />
+
+<ol>
+<li>声明变量 关键字<code>var</code> <code>const</code> <code>final</code></li>
 </ol>
-</p>
+
+<pre><code>a. var
+    // 通过var声明变量，这一点和js没什么区别
+b. const , final
+    // 这两个关键字都是声明常量的（重点看下面的区别）
+    
+    final time = new DateTime.now(); //Ok
+    const time = new DateTime.now(); //Error，new DateTime.now()不是const常量
+    
+    // const 声明的常量不能是变量， 也就是说不能是官方文档所说的运行时常量
+    // final 声明的常量可以是运行时常量也可以是编译时常量（final包含const）
+    // 例如：声明 PI 是个运行时常量  就用const PI = 3.14159
+    
+    // var、final等在左边定义变量的时候，并不关心右边是不是常量
+    // 但是如果右边用了const，那么不管左边如何，右边都必须是常量
+    
+    const list = const[1,2,3];//Ok
+    const list = [1,2,3];//Error
+    
+    final list = [1,2,3];//Ok
+    final list = const[1,2,3];//Ok
+    final list = const[new DateTime.now(),2,3];//Error,const右边必须是常量
+    
+</code></pre>
+
+    </div>
 
     <footer>
-        <ul class="actions">
-            <li><a href="http://liuys.me/blog/mobile-resove/" class="button big">阅读全文</a></li>
-        </ul>
         <ul class="stats">
     
         
@@ -331,27 +482,50 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
 
     
     
-        <li><a href='/categories/html5'>HTML5</a></li>
+        <li><a href='/categories/2018'>2018</a></li>
     
-        <li><a href='/categories/css3'>CSS3</a></li>
+        <li><a href='/categories/flutter'>flutter</a></li>
+    
+        <li><a href='/categories/dart'>dart</a></li>
     
 </ul>
 
     </footer>
 </article>
-
-        
-
-        
 <ul class="actions pagination">
     
-        <li><a href="#" class="disabled button big previous">上一页</a></li>
+        <li><a href="http://liuys.me/blog/2016-final/"
+                class="button big previous">逝去的2016，你收获了什么？</a></li>
     
 
     
-        <li><a href="#" class="disabled button big next">下一页</a></li>
+        <li><a href="http://liuys.me/blog/flutter-dart-2/"
+                class="button big next">[Flutter-前端视角]dart语言学习笔记（2）</a></li>
     
 </ul>
+
+
+
+    
+        <article class="post">
+        <h3>评论：</h3>
+            <div id="comments-container"></div>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: 'Kntt',
+  repo: 'blog-comment',
+  oauth: {
+    client_id: '27aecdee4e9ffa64714d',
+    client_secret: 'a64ec5117efc783ddf1f1d79ba30822d9640d0f0',
+  },
+})
+gitment.render('comments-container')
+</script>
+        </article>
+    
+
 
     </div>
     
@@ -372,9 +546,6 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
                 </header>
             
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/categories/css3/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 
                 
                     
@@ -583,9 +754,6 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
     
         <section id="footer">
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/categories/css3/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 
                 
                     

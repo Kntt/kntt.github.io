@@ -13,7 +13,7 @@
 <html>
     <head>
         
-            <title>CSS3 Posts - Kntt&#39;s Blog</title>
+            <title>Dart Posts - Kntt&#39;s Blog</title>
         
 
         <meta charset="utf-8" />
@@ -31,14 +31,14 @@
         
 
         
-        <meta property="og:title" content="CSS3" />
+        <meta property="og:title" content="Dart" />
 <meta property="og:description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://liuys.me/categories/css3/" />
+<meta property="og:url" content="http://liuys.me/categories/dart/" />
 
 
 
-<meta property="og:updated_time" content="2016-09-20T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-08-28T00:00:00&#43;00:00"/>
 
 
 
@@ -50,7 +50,7 @@
 
 
         
-<meta itemprop="name" content="CSS3">
+<meta itemprop="name" content="Dart">
 <meta itemprop="description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端">
 
 
@@ -241,17 +241,17 @@
 
     
     <div id="main">
-        <h1>CSS3</h1>
+        <h1>Dart</h1>
         
         
             <article class="post">
     <header>
     <div class="title">
         
-            <h2><a href="http://liuys.me/blog/mobile-resove/">移动端网页布局方法总结</a></h2>
+            <h2><a href="http://liuys.me/blog/flutter-dart-4/">[Flutter-前端视角]学习总结</a></h2>
         
         
-            <p>移动端网页布局中需要注意事项以及解决方法总结</p>
+            <p>学习flutter过程的一些个人简介，包括前三篇笔记，能容不多，仅是个人觉得需要注意的地方，后续还会继续更新，欢迎一起探讨～</p>
         
     </div>
     <div class="meta">
@@ -260,8 +260,103 @@
         
 
         <time class="published"
-            datetime='2016-09-20'>
-            September 20, 2016</time>
+            datetime='2018-08-28'>
+            August 28, 2018</time>
+        <span class="author">Kntt</span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+    
+        
+    
+
+
+        
+
+        <a href="http://liuys.me/blog/flutter-dart-4/" class="image featured">
+            <img src="date/2018-08-06.png" alt="" />
+        </a>
+    
+
+
+    <p>[Flutter-前端视角]dart语言学习笔记（1）
+[Flutter-前端视角]dart语言学习笔记（2）
+[Flutter-前端视角]dart语言学习笔记（3）
+ 对应的前端HTML标签  HTML里面的标签在flutter里面叫做Widget,但是Widget并不是html里面的标签，因为css里面的一些属性也处理成相应的Widget了。
+也就是说Widget包含标签和CSS属性
+  h1～h6,p,span文字相关标签  // Text类，可以看作是块级的文字显示 new Text( &quot;Lorem ipsum&quot;, style: new TextStyle( fontSize: 24.0 fontWeight: FontWeight.w900, fontFamily: &quot;Georgia&quot;, ), ) // 行内文字使用TextSpan类 new TextSpan( style: bold24Roboto, children: &lt;TextSpan&gt;[ new TextSpan(text: &quot;Lorem &quot;), new TextSpan( text: &quot;ipsum&quot;, style: new TextStyle( fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 48.0, ), ), ], )   这两个类都只能处理文字样式，fontsize， fontweight等。间距等属性要借助其他类去处理
+  img标签  // 网络图片 Image.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://liuys.me/blog/flutter-dart-4/" class="button big">阅读全文</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/2018'>2018</a></li>
+    
+        <li><a href='/categories/flutter'>flutter</a></li>
+    
+        <li><a href='/categories/dart'>dart</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://liuys.me/blog/flutter-dart-3/">[Flutter-前端视角]dart语言学习笔记（3）</a></h2>
+        
+        
+            <p>学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2018-08-20'>
+            August 20, 2018</time>
         <span class="author">Kntt</span>
         
             <p>2 minute read</p>
@@ -288,27 +383,24 @@
 
         
 
-        <a href="http://liuys.me/blog/mobile-resove/" class="image featured">
-            <img src="/img/2016/09/2016-09.png" alt="" />
+        <a href="http://liuys.me/blog/flutter-dart-3/" class="image featured">
+            <img src="date/2018-08-06.png" alt="" />
         </a>
     
 
 
-    <p><ol>
-<li>移动端，a、input标签被点击时查实的半透明灰色背景 描述：发生在wp操作系统中
-&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;  2.关闭IOS键盘首字母大写 描述：
-&lt;input type=&quot;text&quot; autocapitalize=&quot;off&quot; /&gt;  3.禁止文本缩放 描述：
-html { -webkit-text-size-adjust: 100%; }  4.清除输入框内阴影 描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除
-input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数字为电话，忽略email 描述：
-&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no, email=no&quot;/&gt;  6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
-.xxx { overflow: auto; -webkit-overflow-scrolling: touch; }  7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;
-.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &lt;any onselectstart=&quot;return false;&quot; unselectable=&quot;on&quot;&gt;&lt;/any&gt;  8.</li>
-</ol>
-</p>
+    <p>类和对象 Dart是一门使用类和单继承的面向对象语言 &gt;所有的对象都是类的实例，并且所有的类都是Object的子类
+ 定义   类的定义用class关键字
+如果未显式定义构造函数，会默认一个空的构造函数
+使用new关键字和构造函数来创建对象
+ 2.构造函数
+ 如果只是简单的参数传递，可以在构造函数的参数前加this关键字定义或者参数后加: 再赋值
+没有函数体的函数可以直接写;来结束函数声明
+ class Point { num x; num y; num z; // 第一个值传递给this.x，第二个值传递给this.y, 类似js中的解构赋值 Point(this.x, this.y, z) { this.z = z; } // 命名构造函数，格式为Class.name(var param) Point.fromList(var list): x = list[0], y = list[1], z=list[2]; //当然，上面句你也可以简写为：this相当于自身的构造函数 //Point.fromList(var list):this(list[0], list[1], list[2]); String toString() =&gt; &lsquo;x:$x y:$y z:$z&rsquo;; } void main() { var p1 = new Point(1, 2, 3); var p2 = new Point.</p>
 
     <footer>
         <ul class="actions">
-            <li><a href="http://liuys.me/blog/mobile-resove/" class="button big">阅读全文</a></li>
+            <li><a href="http://liuys.me/blog/flutter-dart-3/" class="button big">阅读全文</a></li>
         </ul>
         <ul class="stats">
     
@@ -331,9 +423,101 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
 
     
     
-        <li><a href='/categories/html5'>HTML5</a></li>
+        <li><a href='/categories/2018'>2018</a></li>
     
-        <li><a href='/categories/css3'>CSS3</a></li>
+        <li><a href='/categories/flutter'>flutter</a></li>
+    
+        <li><a href='/categories/dart'>dart</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://liuys.me/blog/flutter-dart-2/">[Flutter-前端视角]dart语言学习笔记（2）</a></h2>
+        
+        
+            <p>学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2018-08-09'>
+            August 9, 2018</time>
+        <span class="author">Kntt</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+    
+        
+    
+
+
+        
+
+        <a href="http://liuys.me/blog/flutter-dart-2/" class="image featured">
+            <img src="/img/2018/08/2018-08-06.png" alt="" />
+        </a>
+    
+
+
+    <p>标记特殊需要记忆的点  取整~/操作符之前可能很少看到，代码如下  int a = 3； int b = 2； print(a~/b);//输出1  2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于js的链式调用，隐式的返回原对象)
+class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&gt; &lsquo;Name:$name\nCountry:$country&rsquo;; } void main() { Person p = new Person(); p ..name = &lsquo;Wang&rsquo; ..setCountry(&lsquo;China&rsquo;); print(p); }   If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false）  if(i&lt;0){ print(&lsquo;i &lt; 0&rsquo;); }else if(i ==0){ print(&lsquo;i = 0&rsquo;); } else { print(&lsquo;i &gt; 0&rsquo;); }   循环 for forEach for-in  for(int i = 0; i&lt;3; i++) { print(i); }  如果迭代的对象是容器，那么可以使用forEach或者for-in</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://liuys.me/blog/flutter-dart-2/" class="button big">阅读全文</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/2018'>2018</a></li>
+    
+        <li><a href='/categories/flutter'>flutter</a></li>
+    
+        <li><a href='/categories/dart'>dart</a></li>
     
 </ul>
 
@@ -349,7 +533,8 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
     
 
     
-        <li><a href="#" class="disabled button big next">下一页</a></li>
+        <li><a href="/categories/dart/page/2/"
+                class="button big next">Next Page</a></li>
     
 </ul>
 
@@ -373,7 +558,7 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
             
             <ul class="icons">
                 
-                    <li><a href="http://liuys.me/categories/css3/index.xml" type="application/rss+xml"
+                    <li><a href="http://liuys.me/categories/dart/index.xml" type="application/rss+xml"
                         target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 
                 
@@ -584,7 +769,7 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
         <section id="footer">
             <ul class="icons">
                 
-                    <li><a href="http://liuys.me/categories/css3/index.xml" type="application/rss+xml"
+                    <li><a href="http://liuys.me/categories/dart/index.xml" type="application/rss+xml"
                         target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 
                 

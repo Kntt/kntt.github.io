@@ -1,8 +1,8 @@
 
 
-
     
-        
+
+
     
 
 
@@ -13,7 +13,7 @@
 <html>
     <head>
         
-            <title>Vue Posts - Kntt&#39;s Blog</title>
+            <title>Blog - Kntt&#39;s Blog</title>
         
 
         <meta charset="utf-8" />
@@ -31,14 +31,14 @@
         
 
         
-        <meta property="og:title" content="Vue" />
+        <meta property="og:title" content="Blogs" />
 <meta property="og:description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://liuys.me/categories/vue/" />
+<meta property="og:url" content="http://liuys.me/blog/" />
 
 
 
-<meta property="og:updated_time" content="2017-04-08T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-08-06T00:00:00&#43;00:00"/>
 
 
 
@@ -50,7 +50,7 @@
 
 
         
-<meta itemprop="name" content="Vue">
+<meta itemprop="name" content="Blogs">
 <meta itemprop="description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端">
 
 
@@ -225,11 +225,11 @@
 
                 
                     <li>
-                        <a href="http://liuys.me/blog/vue-study-1/"><p>VUE2学习记录(一)</p></a>
+                        <a href="http://liuys.me/blog/flutter-dart-4/"><p>[Flutter-前端视角]学习总结</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://liuys.me/blog/2016-final/"><p>逝去的2016，你收获了什么？</p></a>
+                        <a href="http://liuys.me/blog/flutter-dart-3/"><p>[Flutter-前端视角]dart语言学习笔记（3）</p></a>
                     </li>
                 
             </ul>
@@ -241,17 +241,20 @@
 
     
     <div id="main">
-        <h1>Vue</h1>
         
+        
+            
+        
+
         
             <article class="post">
     <header>
     <div class="title">
         
-            <h2><a href="http://liuys.me/blog/vue-study-1/">VUE2学习记录(一)</a></h2>
+            <h2><a href="http://liuys.me/blog/flutter-dart-1/">[Flutter-前端视角]dart语言学习笔记（1）</a></h2>
         
         
-            <p>重新学习下vue2.0,记录下自己的学习过程,记录一:模版语法</p>
+            <p>学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～</p>
         
     </div>
     <div class="meta">
@@ -260,11 +263,11 @@
         
 
         <time class="published"
-            datetime='2017-04-08'>
-            April 8, 2017</time>
+            datetime='2018-08-06'>
+            August 6, 2018</time>
         <span class="author">Kntt</span>
         
-            <p>3 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -288,22 +291,125 @@
 
         
 
-        <a href="http://liuys.me/blog/vue-study-1/" class="image featured">
-            <img src="/img/2017/04/vue.jpg" alt="" />
+        <a href="http://liuys.me/blog/flutter-dart-1/" class="image featured">
+            <img src="/img/2018/08/2018-08-06.png" alt="" />
         </a>
     
 
 
-    <p>前言 vue2.0来了已经有一段时间了,一直也没好好的看一下2.0的改动, 刚好最近开始使用. 自己也就重新再撸一遍知识点,顺带整
-理一下自己的学习过程,过程中对于 2.0的不同说下自己的理解,若有不对的地方,还望留言指正,共同进步!
-学习过程中的项目,是使用vue-cli 2.2的手脚架项目.
-介绍一下 项目目录结构:
-. |&ndash; build // webpack 配置 |&ndash; config    // 环境参数 |&ndash; src // 源码 | |&ndash; assets  | |&ndash; components    // 组件目录 | |&ndash; router    // 路由 | |&ndash; App.vue // vue 根模块 | <code>-- main.js    // 主入口js文件 |-- static   // 静态资源目录 |-- test  // 单元测试目录 |-- index.html    // 主页 |-- package.json  // 项目依赖</code>&ndash; README.md    下面开始学习过程:
-模版语法 1.</p>
+    <p>一. 基础数据类型 - 一切皆对象  Numbers Strings Booleans Lists Maps Runes (用于在字符串中表示 Unicode 字符) &ndash; 后面继续看 Symbols   声明变量 关键字var const final  a. var // 通过var声明变量，这一点和js没什么区别 b. const , final // 这两个关键字都是声明常量的（重点看下面的区别） final time = new DateTime.now(); //Ok const time = new DateTime.now(); //Error，new DateTime.now()不是const常量 // const 声明的常量不能是变量， 也就是说不能是官方文档所说的运行时常量 // final 声明的常量可以是运行时常量也可以是编译时常量（final包含const） // 例如：声明 PI 是个运行时常量 就用const PI = 3.14159 // var、final等在左边定义变量的时候，并不关心右边是不是常量 // 但是如果右边用了const，那么不管左边如何，右边都必须是常量 const list = const[1,2,3];//Ok const list = [1,2,3];//Error final list = [1,2,3];//Ok final list = const[1,2,3];//Ok final list = const[new DateTime.</p>
 
     <footer>
         <ul class="actions">
-            <li><a href="http://liuys.me/blog/vue-study-1/" class="button big">阅读全文</a></li>
+            <li><a href="http://liuys.me/blog/flutter-dart-1/" class="button big">阅读全文</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/2018'>2018</a></li>
+    
+        <li><a href='/categories/flutter'>flutter</a></li>
+    
+        <li><a href='/categories/dart'>dart</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://liuys.me/blog/2016-final/">逝去的2016，你收获了什么？</a></h2>
+        
+        
+            <p>找寻时间的步伐，追逐时间的痕迹。留下自己独一无二的脚印</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2017-01-04'>
+            January 4, 2017</time>
+        <span class="author">Kntt</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+    
+        
+    
+
+
+        
+
+        <a href="http://liuys.me/blog/2016-final/" class="image featured">
+            <img src="/img/2017/01/2017-1-4.png" alt="" />
+        </a>
+    
+
+
+    <p>生命的旅途，一程有一程的风景。回看2016年，曾经的片段，总有一些bug，会停留在JIRA上;总有一些技术，静静的停留在计划中。这一年经历了哪些，学会了什么?
+2016-01，离开工作四年的公司，只为了离家更近！ 很想念新疆的蓝天，没有雾霾的日子，想念滑雪一圈几公里的快感！
+问候一句曾经的兄弟们，你们还好吗？
+2016-02 —— 2016-04，回到北京，进入现在的公司！ 回来做的第一个项目：微信点餐系统（名字就不说了）
+期间：印象最深刻的一个思想——去中心化的O2O！
+也是正式开始写移动端页面。
+以前一直写的管理后台，移动端项目接触的非常少，开始写移动端的时候遇到过很多坑，前一篇文章就是填坑过程中总结的一些东西。当然不仅仅是这些坑，还有一些是真的忘了（0.0好了伤疤忘了疼）。这一阶段收获还是蛮多的，特别是移动端的一些技巧！后面有时间再整理一些 这个项目的后端语言是Go，从最开始接触的.NET，JAVA，到后来自学的Node，PHP， Go是我最近最感兴趣的，建议有经历的朋友可以学学，语法非常简单，开发速度最快的编译型语言（不知道是不是之一）。都说处理高并发非常厉害，作为一个前端我是真看不出来，嘿嘿！
+最重要的收获：对于微信JSDK，有了非常熟练的掌握
+2016-05 —— 2016-08，回到老本行，管理后台！ 与之前不同的地方，这次是 angular + webpack 构建的后台项目
+收获：
+1. 通过自己编写directive，对angular的指令有了更深刻的了解。这也是angular的乐趣之一
+2. 编写service，学到了一种angular思想，controller只处理逻辑问题，传输数据，用户信息，用户权限等操作，尽可能的放在service 里面完成
+3. webpack的乐趣，使用插件来提高开发效率，掌握前端自动化工具，为了更好的专注于前端本身
+4. 使用了MVC框架之后，发现特别的不喜欢频繁的操作DOM了，这也是我学些VUE的一个动力！
+5. 自学VUE，自己写了一个微信打卡的小项目，使用价值不高，只是单纯的为了学习VUE。后面共享到Github供大家参考!
+2016-09，发现Hugo，搭建自己的博客！ 很早就有搭建博客的想法，最开始看的是Hexo，总觉得不是自己的菜。直到发现hugo，是真的喜欢！如果你也在寻找，不妨试一试，有什么问题可以留言，一起探讨！
+2016-10 —— 2016-12，开始关注angular2，TypeScript 写angular1项目，组件化的思想开始进入我的视线！到自学VUE，再次看到组件化的思想，让我正视前端的发展方向！回想以前常用的CV大法，发现确实是非常稚嫩。因此我的目光开始关注这方面的技术，一切皆组件，angular2也是在这个时候进入我的学习计划中。写ng1项目时候，社区里面反应的弊端，大部分我都遇到过，因此对于ng2的期望是非常的高，它也没有让我失望！学习ng2，自然少不了ts了，这个JavaScript的超集，解决了js的大部分诟病，更彻底将js转变为面向对象的开发方式（类java），学过java的上手回非常快，希望可以有一起学习的朋友！
+最后 2016算是一个满意的结束，成绩不多，也没有什么遗憾！
+2017年的第一个目标，继续学习Typescript，写一个自己的ng2项目！
+2016最重要的收获是，认识了她！以后最大的目标就是：让你过的幸福！！！ 加油</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://liuys.me/blog/2016-final/" class="button big">阅读全文</a></li>
         </ul>
         <ul class="stats">
     
@@ -326,7 +432,104 @@
 
     
     
-        <li><a href='/categories/vue'>vue</a></li>
+        <li><a href='/categories/2016'>2016</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://liuys.me/blog/mobile-resove/">移动端网页布局方法总结</a></h2>
+        
+        
+            <p>移动端网页布局中需要注意事项以及解决方法总结</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-09-20'>
+            September 20, 2016</time>
+        <span class="author">Kntt</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+    
+        
+    
+
+
+        
+
+        <a href="http://liuys.me/blog/mobile-resove/" class="image featured">
+            <img src="/img/2016/09/2016-09.png" alt="" />
+        </a>
+    
+
+
+    <p><ol>
+<li>移动端，a、input标签被点击时查实的半透明灰色背景 描述：发生在wp操作系统中
+&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;  2.关闭IOS键盘首字母大写 描述：
+&lt;input type=&quot;text&quot; autocapitalize=&quot;off&quot; /&gt;  3.禁止文本缩放 描述：
+html { -webkit-text-size-adjust: 100%; }  4.清除输入框内阴影 描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除
+input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数字为电话，忽略email 描述：
+&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no, email=no&quot;/&gt;  6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
+.xxx { overflow: auto; -webkit-overflow-scrolling: touch; }  7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;
+.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &lt;any onselectstart=&quot;return false;&quot; unselectable=&quot;on&quot;&gt;&lt;/any&gt;  8.</li>
+</ol>
+</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://liuys.me/blog/mobile-resove/" class="button big">阅读全文</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/html5'>HTML5</a></li>
+    
+        <li><a href='/categories/css3'>CSS3</a></li>
     
 </ul>
 
@@ -338,7 +541,8 @@
         
 <ul class="actions pagination">
     
-        <li><a href="#" class="disabled button big previous">上一页</a></li>
+        <li><a href="/blog/"
+                class="button big previous">Previous Page</a></li>
     
 
     
@@ -366,7 +570,7 @@
             
             <ul class="icons">
                 
-                    <li><a href="http://liuys.me/categories/vue/index.xml" type="application/rss+xml"
+                    <li><a href="http://liuys.me/blog/index.xml" type="application/rss+xml"
                         target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 
                 
@@ -448,13 +652,13 @@
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://liuys.me/blog/vue-study-1/">VUE2学习记录(一)</a></h3>
+                                <h3><a href="http://liuys.me/blog/flutter-dart-4/">[Flutter-前端视角]学习总结</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2017-04-08'>
-                                    April 8, 2017</time>
+                                    '2018-08-28'>
+                                    August 28, 2018</time>
                             </header>
                         </article>
                     </li>
@@ -462,13 +666,13 @@
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://liuys.me/blog/2016-final/">逝去的2016，你收获了什么？</a></h3>
+                                <h3><a href="http://liuys.me/blog/flutter-dart-3/">[Flutter-前端视角]dart语言学习笔记（3）</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2017-01-04'>
-                                    January 4, 2017</time>
+                                    '2018-08-20'>
+                                    August 20, 2018</time>
                             </header>
                         </article>
                     </li>
@@ -506,6 +710,33 @@
                     <li>
                         <article>
                             <header>
+                                <a href="/categories/2018/">2018</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/dart/">dart</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/flutter/">flutter</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
                                 <a href="/categories/2016/">2016</a>
                                 <span style="float:right;">1</span>
                             </header>
@@ -525,15 +756,6 @@
                         <article>
                             <header>
                                 <a href="/categories/html5/">HTML5</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vue/">vue</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -559,7 +781,7 @@
         <section id="footer">
             <ul class="icons">
                 
-                    <li><a href="http://liuys.me/categories/vue/index.xml" type="application/rss+xml"
+                    <li><a href="http://liuys.me/blog/index.xml" type="application/rss+xml"
                         target="_blank" title="RSS" class="fa fa-rss"></a></li>
                 
                 
