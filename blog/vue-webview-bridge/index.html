@@ -1,0 +1,967 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>一个Bug的修复，促使我写了一个package</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.53" />
+        
+
+
+        
+            <meta name="author" content="Kntt">
+        
+        
+            <meta name="description" content="一个Bug的修复的经历，促使我写了一个package">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="一个Bug的修复，促使我写了一个package"/>
+<meta name="twitter:description" content="一个Bug的修复的经历，促使我写了一个package"/>
+
+        <meta property="og:title" content="一个Bug的修复，促使我写了一个package" />
+<meta property="og:description" content="一个Bug的修复的经历，促使我写了一个package" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://liuys.me/blog/vue-webview-bridge/" /><meta property="article:published_time" content="2019-02-17T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-02-17T00:00:00&#43;00:00"/>
+
+        
+<meta itemprop="name" content="一个Bug的修复，促使我写了一个package">
+<meta itemprop="description" content="一个Bug的修复的经历，促使我写了一个package">
+
+
+<meta itemprop="datePublished" content="2019-02-17T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-02-17T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="171">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="/css/google-font.css" />
+            <link rel="stylesheet" href="/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="/css/main.css" />
+            <link rel="stylesheet" href="/css/add-on.css" />
+            <link rel="stylesheet" href="/css/monokai-sublime.css">
+        
+
+        
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="/">Kntt&#39;s blog</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                        
+                            <i class="fa fa-home">&nbsp;</i>首页
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog">
+                        
+                            <i class="fa fa-edit">&nbsp;</i>博客
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories">
+                        
+                            <i class="fa fa-th">&nbsp;</i>分类
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                        
+                            <i class="fa fa-user">&nbsp;</i>关于我
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//baidu.com/baidu">
+                    <input type="text" name="word" placeholder="请输入关键字" />
+                    <input type="hidden" name="si" value="liuys.me">
+                    <input name="tn" type="hidden" value="bds">
+                    <input name="cl" type="hidden" value="3">
+                    <input name="ct" type="hidden" value="2097152">
+                    <input name="ie" type="hidden" value="utf-8">
+                    <input name="s" type="hidden" value="on">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//baidu.com/baidu">
+                <input type="text" name="word" placeholder="请输入关键字" />
+                <input type="hidden" name="si" value="liuys.me">
+                <input name="tn" type="hidden" value="bds">
+                <input name="cl" type="hidden" value="3">
+                <input name="ct" type="hidden" value="2097152">
+                <input name="ie" type="hidden" value="utf-8">
+                <input name="s" type="hidden" value="on">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                
+                                    <i class="fa fa-home">&nbsp;</i>
+                                
+                                首页
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog">
+                            <h3>
+                                
+                                    <i class="fa fa-edit">&nbsp;</i>
+                                
+                                博客
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-th">&nbsp;</i>
+                                
+                                分类
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                
+                                    <i class="fa fa-user">&nbsp;</i>
+                                
+                                关于我
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>最新发表</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://liuys.me/blog/vue-webview-bridge/"><p>一个Bug的修复，促使我写了一个package</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://liuys.me/blog/flutter-dart-4/"><p>[Flutter-前端视角]学习总结</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&text=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&title=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&title=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&title=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Kntt&body=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://liuys.me/blog/vue-webview-bridge/">一个Bug的修复，促使我写了一个package</a></h1>
+            
+        
+        
+            <p>一个Bug的修复的经历，促使我写了一个package</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2019-02-17'>
+            February 17, 2019</time>
+        <span class="author">Kntt</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&text=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&title=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&title=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f&title=%e4%b8%80%e4%b8%aaBug%e7%9a%84%e4%bf%ae%e5%a4%8d%ef%bc%8c%e4%bf%83%e4%bd%bf%e6%88%91%e5%86%99%e4%ba%86%e4%b8%80%e4%b8%aapackage" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Kntt&body=http%3a%2f%2fliuys.me%2fblog%2fvue-webview-bridge%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+    
+        
+    
+
+
+        
+
+        <a href="http://liuys.me/blog/vue-webview-bridge/" class="image featured">
+            <img src="/img/2019/02/2019-02-17.jpg" alt="" />
+        </a>
+    
+
+
+    <div id="content">
+        
+
+<h3 id="项目地址-vue-webview-js-bridge-https-github-com-kntt-vue-js-bridge">项目地址：<a href="https://github.com/Kntt/vue-js-bridge">vue-webview-js-bridge</a></h3>
+
+<blockquote>
+<p>主要功能：基于<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>开发的webview-js-bridge的vue插件，后面废话较多，可以直接看项目。如果刚好闲来无事，权当打发时间</p>
+</blockquote>
+
+<h3 id="故事背景">故事背景</h3>
+
+<blockquote>
+<p>本人前端，在一个移动办公APP团队。由于业务简单，并没有使用RN，WEEX等技术。简单的使用native做了一个壳，主要逻辑都是前端控制。主技术栈是Vue.</p>
+</blockquote>
+
+<h3 id="bug出现">bug出现</h3>
+
+<blockquote>
+<p>在一段时间内，团队接到多人反馈，APP每天都需要重新登陆。作为团队的前端我很诧异，因为登陆大token在前端保存，有效期是三天，怎么可能会每天都要登陆呢？</p>
+</blockquote>
+
+<h3 id="排查原因">排查原因</h3>
+
+<ol>
+<li>token有效期三天这个肯定没有问题</li>
+<li>团队成员手机都没出过问题，证明逻辑没问题</li>
+<li>收集问题反馈人手机信息，发现所有反馈人员的手机有一个共同点，储存空间都不足（ios），问题也主要集中在苹果手机</li>
+</ol>
+
+<blockquote>
+<p>定位问题原因，可能是因为手机储存空间不足，把储存的token清理了。按着这个思路开始排查&hellip;
+难道是手机内存空间不足，把储存的token当作没用的信息清理了？（token存在localstorage里面）。
+通过google发现，ios确实存在这种情况，当手机储存空间不足时候会把系统认为无用的信息清理掉，给主要程序提供运行环境。</p>
+</blockquote>
+
+<h3 id="问题复现">问题复现</h3>
+
+<blockquote>
+<p>找到一台储存空间不足的苹果测试机，登陆到APP后，找一部非常大的电影下载。这时候系统就会清理空间来满足下载电影的需求。结果发现APP需要重新登陆了。问题复现，原因确认。</p>
+</blockquote>
+
+<h3 id="解决问题">解决问题</h3>
+
+<blockquote>
+<p>一个小APP，仅仅为了储存token而引入sqlite之类的本地数据库，很有些大材小用。但是localstorage，cookie等能储存的地方又都在系统清理的范围内。最后决定把token储存在native端。</p>
+</blockquote>
+
+<h3 id="解决方案">解决方案</h3>
+
+<ol>
+<li>native开发类似localstorage的功能</li>
+<li>token存入native端</li>
+<li>前端启动时查询native端是否存在token，存在就同步到localstorage，不存在，跳转登陆页面。</li>
+<li>其他逻辑不变</li>
+</ol>
+
+<blockquote>
+<p>方案确定，一个字，撸起袖子一顿猛干。。。</p>
+</blockquote>
+
+<h3 id="坑中有坑">坑中有坑</h3>
+
+<blockquote>
+<p>你说难受不难受&hellip;，就不描述经过了，心疼。直接说结论了
+前端和Native端通信采用的是<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>，问题就出在这里，见代码：</p>
+
+<pre><code class="language-js">import jsBridge from './utils/native'
+// 省略n行...
+router.beforeEach((to, from, next) =&gt; {
+  if (to.meta.auth) {
+    // 问题出在这里，从APP启动到vue运行到这里，jsBridge实例还未初始化完成，导致jsBridge是undifined
+    jsBridge.callHandler('getStorage', {key: 'token'}).then(res =&gt; {
+      let token = res.body
+      if (token &amp;&amp; token !== 'null') {
+        next()
+      } else {
+        next('/login')
+      }
+      store.commit('UPDATE_TOKEN', {token})
+    })
+  } else {
+    next()
+  }
+})
+// 省略n行...
+
+</code></pre>
+
+<p>问题已经确定了，是调用jsBridge实例时，它还未初始化完成。感兴趣的可以去看下<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>源码，虽然初始化时间很短，但是已经造成了问题，APP到这里启动报错。</p>
+</blockquote>
+
+<p>继续解决问题：既然未初始化完成，那我们等它完成再用不就完了。有人提议用<code>setTimeout</code>,但是延时多少时间呢？时间短了不一定hold住啊，毕竟不同手机初始化时间还是有差别的。设置长了影响体验，作为一个前端如果用户体验都不顾那还做什么前端，所以这个最容易也是最low的方法被pass了。</p>
+
+<h3 id="想一个优雅的解决办法">想一个优雅的解决办法</h3>
+
+<blockquote>
+<p>这就是我写的这个package的初衷，废话说了这么多，进入正题了</p>
+</blockquote>
+
+<ol>
+<li>从解决问题的角度出发</li>
+</ol>
+
+<blockquote>
+<p>既然使用jsBridge实例时你还没初始化完成，那我们就每次等你初始化完成，把实例回传回来后我再调用，这样就不同担心bridge实例不可用的问题了</p>
+</blockquote>
+
+<p>核心代码</p>
+
+<pre><code class="language-js">// ...
+init (callback) {
+    if (window.WebViewJavascriptBridge) {
+      return callback(window.WebViewJavascriptBridge)
+    }
+    if (window.WVJBCallbacks) {
+      return window.WVJBCallbacks.push(callback)
+    }
+    window.WVJBCallbacks = [callback]
+    var WVJBIframe = document.createElement('iframe')
+    WVJBIframe.style.display = 'none'
+    WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__'
+    document.documentElement.appendChild(WVJBIframe)
+    setTimeout(function () {
+      document.documentElement.removeChild(WVJBIframe)
+    }, 0)
+}
+callHandler (payload) {
+    let _resolve
+    let _reject
+    const readyPromise = new Promise((resolve, reject) =&gt; {
+      _resolve = resolve
+      _reject = reject
+    })
+    this.init(function (bridge) {
+      try {
+        bridge.callHandler(nativeHandlerName, payload, (response) =&gt; {
+          _resolve(response)
+        })
+      } catch (e) {
+        _reject(e)
+      }
+    })
+    return readyPromise
+}
+// ...
+</code></pre>
+
+<blockquote>
+<p>习惯了使用Promise的调用方式，顺手把调用方法Promise化处理。</p>
+</blockquote>
+
+<h3 id="后续">后续</h3>
+
+<blockquote>
+<p>为了开发效率，不能一直在APP里面调试，又增加了mock功能，debug功能。</p>
+</blockquote>
+
+<p>项目地址：<a href="https://github.com/Kntt/vue-js-bridge">vue-webview-js-bridge</a> 如果刚好对你还有些帮助，欢迎star，欢迎pr</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/2019'>2019</a></li>
+    
+        <li><a href='/categories/vue'>vue</a></li>
+    
+        <li><a href='/categories/webview'>webview</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="http://liuys.me/blog/flutter-dart-4/"
+                class="button big previous">[Flutter-前端视角]学习总结</a></li>
+    
+
+    
+</ul>
+
+
+
+    
+        <article class="post">
+        <h3>评论：</h3>
+            <div id="comments-container"></div>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: 'Kntt',
+  repo: 'blog-comment',
+  oauth: {
+    client_id: '27aecdee4e9ffa64714d',
+    client_secret: 'a64ec5117efc783ddf1f1d79ba30822d9640d0f0',
+  },
+})
+gitment.render('comments-container')
+</script>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="/" class="logo"><img src="/img/main/logo.jpg" alt="Kntt&#39;s Blog" /></a>
+                
+            
+            
+                <header>
+                    <h2>I&#39;M KNTT</h2>
+                    <p>立志卓越，方正为人</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:kntt9968@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3><i class="fa fa-file-text"></i>最新发表</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://liuys.me/blog/vue-webview-bridge/">一个Bug的修复，促使我写了一个package</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2019-02-17'>
+                                    February 17, 2019</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://liuys.me/blog/flutter-dart-4/">[Flutter-前端视角]学习总结</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2018-08-28'>
+                                    August 28, 2018</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /blog/
+                            
+                            class="button">更多内容</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><i class="fa fa-th-list"></i><a href="/categories/">分类</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/2018/">2018</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/dart/">dart</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/flutter/">flutter</a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/2016/">2016</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/2019/">2019</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/css3/">CSS3</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/html5/">HTML5</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/vue/">vue</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/webview/">webview</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2><i class="fa fa-mortar-board"></i>关于我</h2>
+            <p>一个有理想的，前端er。各种奇思妙想，有很强的自我管理意识...</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button big">更多...</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:kntt9968@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; Kntt&#39;s Blog. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src="/js/jquery.min.js"></script>
+            <script src="/js/skel.min.js"></script>
+            <script src="/js/util.js"></script>
+            <script src="/js/main.js"></script>
+            <script src="/js/backToTop.js"></script>
+            <script src="/js/highlight.pack.js"></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

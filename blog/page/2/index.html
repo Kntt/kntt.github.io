@@ -19,7 +19,7 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.46" />
+        <meta name="generator" content="Hugo 0.53" />
         
 
 
@@ -38,19 +38,7 @@
 <meta property="og:description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liuys.me/blog/" />
-
-
-
-<meta property="og:updated_time" content="2018-08-06T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
+<meta property="og:updated_time" content="2018-08-09T00:00:00&#43;00:00"/>
 
         
 <meta itemprop="name" content="Blogs">
@@ -228,11 +216,11 @@
 
                 
                     <li>
-                        <a href="http://liuys.me/blog/flutter-dart-4/"><p>[Flutter-前端视角]学习总结</p></a>
+                        <a href="http://liuys.me/blog/vue-webview-bridge/"><p>一个Bug的修复，促使我写了一个package</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://liuys.me/blog/flutter-dart-3/"><p>[Flutter-前端视角]dart语言学习笔记（3）</p></a>
+                        <a href="http://liuys.me/blog/flutter-dart-4/"><p>[Flutter-前端视角]学习总结</p></a>
                     </li>
                 
             </ul>
@@ -248,6 +236,96 @@
         
             
         
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://liuys.me/blog/flutter-dart-2/">[Flutter-前端视角]dart语言学习笔记（2）</a></h2>
+        
+        
+            <p>学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2018-08-09'>
+            August 9, 2018</time>
+        <span class="author">Kntt</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+    
+
+    
+        
+        
+
+
+
+
+    
+    
+        
+    
+
+
+        
+
+        <a href="http://liuys.me/blog/flutter-dart-2/" class="image featured">
+            <img src="/img/2018/08/2018-08-06.png" alt="" />
+        </a>
+    
+
+
+    <p>标记特殊需要记忆的点  取整~/操作符之前可能很少看到，代码如下  int a = 3； int b = 2； print(a~/b);//输出1  2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于js的链式调用，隐式的返回原对象)
+class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&gt; &lsquo;Name:$name\nCountry:$country&rsquo;; } void main() { Person p = new Person(); p ..name = &lsquo;Wang&rsquo; ..setCountry(&lsquo;China&rsquo;); print(p); }   If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false）  if(i&lt;0){ print(&lsquo;i &lt; 0&rsquo;); }else if(i ==0){ print(&lsquo;i = 0&rsquo;); } else { print(&lsquo;i &gt; 0&rsquo;); }   循环 for forEach for-in  for(int i = 0; i&lt;3; i++) { print(i); }  如果迭代的对象是容器，那么可以使用forEach或者for-in</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://liuys.me/blog/flutter-dart-2/" class="button big">阅读全文</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/2018'>2018</a></li>
+    
+        <li><a href='/categories/flutter'>flutter</a></li>
+    
+        <li><a href='/categories/dart'>dart</a></li>
+    
+</ul>
+
+    </footer>
+</article>
 
         
             <article class="post">
@@ -443,103 +521,6 @@
 </article>
 
         
-            <article class="post">
-    <header>
-    <div class="title">
-        
-            <h2><a href="http://liuys.me/blog/mobile-resove/">移动端网页布局方法总结</a></h2>
-        
-        
-            <p>移动端网页布局中需要注意事项以及解决方法总结</p>
-        
-    </div>
-    <div class="meta">
-        
-            
-        
-
-        <time class="published"
-            datetime='2016-09-20'>
-            September 20, 2016</time>
-        <span class="author">Kntt</span>
-        
-            <p>2 minute read</p>
-        
-        
-    </div>
-</header>
-
-    
-    
-
-    
-        
-        
-
-
-
-
-    
-    
-        
-    
-
-
-        
-
-        <a href="http://liuys.me/blog/mobile-resove/" class="image featured">
-            <img src="/img/2016/09/2016-09.png" alt="" />
-        </a>
-    
-
-
-    <p><ol>
-<li>移动端，a、input标签被点击时查实的半透明灰色背景 描述：发生在wp操作系统中
-&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;  2.关闭IOS键盘首字母大写 描述：
-&lt;input type=&quot;text&quot; autocapitalize=&quot;off&quot; /&gt;  3.禁止文本缩放 描述：
-html { -webkit-text-size-adjust: 100%; }  4.清除输入框内阴影 描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除
-input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数字为电话，忽略email 描述：
-&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no, email=no&quot;/&gt;  6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
-.xxx { overflow: auto; -webkit-overflow-scrolling: touch; }  7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;
-.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &lt;any onselectstart=&quot;return false;&quot; unselectable=&quot;on&quot;&gt;&lt;/any&gt;  8.</li>
-</ol>
-</p>
-
-    <footer>
-        <ul class="actions">
-            <li><a href="http://liuys.me/blog/mobile-resove/" class="button big">阅读全文</a></li>
-        </ul>
-        <ul class="stats">
-    
-        
-
-        
-        
-            <li>
-                
-                
-                    
-
-                    
-                        Categories
-                    
-                
-            </li>
-        
-    
-
-    
-    
-        <li><a href='/categories/html5'>HTML5</a></li>
-    
-        <li><a href='/categories/css3'>CSS3</a></li>
-    
-</ul>
-
-    </footer>
-</article>
-
-        
 
         
 <ul class="actions pagination">
@@ -549,7 +530,8 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
     
 
     
-        <li><a href="#" class="disabled button big next">下一页</a></li>
+        <li><a href="/blog/page/3/"
+                class="button big next">Next Page</a></li>
     
 </ul>
 
@@ -655,13 +637,13 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://liuys.me/blog/flutter-dart-4/">[Flutter-前端视角]学习总结</a></h3>
+                                <h3><a href="http://liuys.me/blog/vue-webview-bridge/">一个Bug的修复，促使我写了一个package</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2018-08-28'>
-                                    August 28, 2018</time>
+                                    '2019-02-17'>
+                                    February 17, 2019</time>
                             </header>
                         </article>
                     </li>
@@ -669,13 +651,13 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://liuys.me/blog/flutter-dart-3/">[Flutter-前端视角]dart语言学习笔记（3）</a></h3>
+                                <h3><a href="http://liuys.me/blog/flutter-dart-4/">[Flutter-前端视角]学习总结</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2018-08-20'>
-                                    August 20, 2018</time>
+                                    '2018-08-28'>
+                                    August 28, 2018</time>
                             </header>
                         </article>
                     </li>
@@ -749,6 +731,15 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
                     <li>
                         <article>
                             <header>
+                                <a href="/categories/2019/">2019</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
                                 <a href="/categories/css3/">CSS3</a>
                                 <span style="float:right;">1</span>
                             </header>
@@ -759,6 +750,24 @@ input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数�
                         <article>
                             <header>
                                 <a href="/categories/html5/">HTML5</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/vue/">vue</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/webview/">webview</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>

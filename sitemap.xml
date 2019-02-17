@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://liuys.me/blog/vue-webview-bridge/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://liuys.me/blog/flutter-dart-4/</loc>
     <lastmod>2018-08-28T00:00:00+00:00</lastmod>
   </url>
@@ -50,8 +55,14 @@
   </url>
   
   <url>
+    <loc>http://liuys.me/categories/2019/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://liuys.me/blog/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,18 +75,6 @@
   <url>
     <loc>http://liuys.me/categories/</loc>
     <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/dart/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/flutter/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -93,6 +92,30 @@
   
   <url>
     <loc>http://liuys.me/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuys.me/categories/dart/</loc>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuys.me/categories/flutter/</loc>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuys.me/categories/vue/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://liuys.me/categories/webview/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
