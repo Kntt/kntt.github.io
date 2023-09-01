@@ -19,7 +19,6 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.53" />
         
 
 
@@ -38,14 +37,9 @@
 <meta property="og:description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liuys.me/categories/flutter/" />
-<meta property="og:updated_time" content="2018-08-28T00:00:00&#43;00:00"/>
 
-        
-<meta itemprop="name" content="flutter">
+        <meta itemprop="name" content="flutter">
 <meta itemprop="description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端">
-
-
-        
 
         
 
@@ -285,13 +279,12 @@
     
 
 
-    <p>[Flutter-前端视角]dart语言学习笔记（1）
-[Flutter-前端视角]dart语言学习笔记（2）
-[Flutter-前端视角]dart语言学习笔记（3）
- 对应的前端HTML标签  HTML里面的标签在flutter里面叫做Widget,但是Widget并不是html里面的标签，因为css里面的一些属性也处理成相应的Widget了。
-也就是说Widget包含标签和CSS属性
-  h1～h6,p,span文字相关标签  // Text类，可以看作是块级的文字显示 new Text( &quot;Lorem ipsum&quot;, style: new TextStyle( fontSize: 24.0 fontWeight: FontWeight.w900, fontFamily: &quot;Georgia&quot;, ), ) // 行内文字使用TextSpan类 new TextSpan( style: bold24Roboto, children: &lt;TextSpan&gt;[ new TextSpan(text: &quot;Lorem &quot;), new TextSpan( text: &quot;ipsum&quot;, style: new TextStyle( fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 48.0, ), ), ], )   这两个类都只能处理文字样式，fontsize， fontweight等。间距等属性要借助其他类去处理
-  img标签  // 网络图片 Image.</p>
+    <p class="summary">[Flutter-前端视角]dart 语言学习笔记（1）
+[Flutter-前端视角]dart 语言学习笔记（2）
+[Flutter-前端视角]dart 语言学习笔记（3）
+对应的前端 HTML 标签 HTML 里面的标签在 flutter 里面叫做Widget,但是Widget并不是 html 里面的标签，因为 css 里面的一些属性也处理成相应的Widget了。
+也就是说Widget包含标签和 CSS 属性
+h1 ～ h6,p,span 文字相关标签 // Text类，可以看作是块级的文字显示 new Text( &quot;Lorem ipsum&quot;, style: new TextStyle( fontSize: 24.0 fontWeight: FontWeight.w900, fontFamily: &quot;Georgia&quot;, ), ) // 行内文字使用TextSpan类 new TextSpan( style: bold24Roboto, children: &lt;TextSpan&gt;[ new TextSpan(text: &quot;Lorem &quot;), new TextSpan( text: &quot;ipsum&quot;, style: new TextStyle( fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 48.0, ), ), ], ) 这两个类都只能处理文字样式，fontsize， fontweight 等。间距等属性要借助其他类去处理</p>
 
     <footer>
         <ul class="actions">
@@ -317,8 +310,6 @@
     
 
     
-    
-        <li><a href='/categories/2018'>2018</a></li>
     
         <li><a href='/categories/flutter'>flutter</a></li>
     
@@ -350,7 +341,7 @@
             August 20, 2018</time>
         <span class="author">Kntt</span>
         
-            <p>2 minute read</p>
+            <p>3 minute read</p>
         
         
     </div>
@@ -380,14 +371,15 @@
     
 
 
-    <p>类和对象 Dart是一门使用类和单继承的面向对象语言 &gt;所有的对象都是类的实例，并且所有的类都是Object的子类
- 定义   类的定义用class关键字
+    <p class="summary">类和对象 Dart 是一门使用类和单继承的面向对象语言
+所有的对象都是类的实例，并且所有的类都是Object的子类
+定义 类的定义用class关键字
 如果未显式定义构造函数，会默认一个空的构造函数
 使用new关键字和构造函数来创建对象
- 2.构造函数
- 如果只是简单的参数传递，可以在构造函数的参数前加this关键字定义或者参数后加: 再赋值
+2.构造函数
+如果只是简单的参数传递，可以在构造函数的参数前加this关键字定义或者参数后加 : 再赋值
 没有函数体的函数可以直接写;来结束函数声明
- class Point { num x; num y; num z; // 第一个值传递给this.x，第二个值传递给this.y, 类似js中的解构赋值 Point(this.x, this.y, z) { this.z = z; } // 命名构造函数，格式为Class.name(var param) Point.fromList(var list): x = list[0], y = list[1], z=list[2]; //当然，上面句你也可以简写为：this相当于自身的构造函数 //Point.fromList(var list):this(list[0], list[1], list[2]); String toString() =&gt; &lsquo;x:$x y:$y z:$z&rsquo;; } void main() { var p1 = new Point(1, 2, 3); var p2 = new Point.</p>
+class Point { num x; num y; num z; // 第一个值传递给this.x，第二个值传递给this.y, 类似js中的解构赋值 Point(this.x, this.y, z) { this.z = z; } // 命名构造函数，格式为Class.name(var param) Point.fromList(var list): x = list[0], y = list[1], z=list[2]; //当然，上面句你也可以简写为：this相当于自身的构造函数 //Point.fromList(var list):this(list[0], list[1], list[2]); String toString() =&gt; 'x:$x y:$y z:$z'; } void main() { var p1 = new Point(1, 2, 3); var p2 = new Point.</p>
 
     <footer>
         <ul class="actions">
@@ -413,8 +405,6 @@
     
 
     
-    
-        <li><a href='/categories/2018'>2018</a></li>
     
         <li><a href='/categories/flutter'>flutter</a></li>
     
@@ -476,8 +466,8 @@
     
 
 
-    <p>标记特殊需要记忆的点  取整~/操作符之前可能很少看到，代码如下  int a = 3； int b = 2； print(a~/b);//输出1  2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于js的链式调用，隐式的返回原对象)
-class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&gt; &lsquo;Name:$name\nCountry:$country&rsquo;; } void main() { Person p = new Person(); p ..name = &lsquo;Wang&rsquo; ..setCountry(&lsquo;China&rsquo;); print(p); }   If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false）  if(i&lt;0){ print(&lsquo;i &lt; 0&rsquo;); }else if(i ==0){ print(&lsquo;i = 0&rsquo;); } else { print(&lsquo;i &gt; 0&rsquo;); }   循环 for forEach for-in  for(int i = 0; i&lt;3; i++) { print(i); }  如果迭代的对象是容器，那么可以使用forEach或者for-in</p>
+    <p class="summary">标记特殊需要记忆的点 取整~/操作符之前可能很少看到，代码如下 int a = 3； int b = 2； print(a~/b);//输出1 2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于 js 的链式调用，隐式的返回原对象)
+class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&gt; 'Name:$name\nCountry:$country'; } void main() { Person p = new Person(); p ..name = 'Wang' ..setCountry('China'); print(p); } If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false） if(i&lt;0){ print('i &lt; 0'); }else if(i ==0){ print('i = 0'); } else { print('i &gt; 0'); } 循环 for forEach for-in for(int i = 0; i&lt;3; i++) { print(i); } 如果迭代的对象是容器，那么可以使用forEach或者for-in</p>
 
     <footer>
         <ul class="actions">
@@ -504,8 +494,6 @@ class Person { String name; String country; void setCountry(String country){ thi
 
     
     
-        <li><a href='/categories/2018'>2018</a></li>
-    
         <li><a href='/categories/flutter'>flutter</a></li>
     
         <li><a href='/categories/dart'>dart</a></li>
@@ -525,7 +513,7 @@ class Person { String name; String country; void setCountry(String country){ thi
 
     
         <li><a href="/categories/flutter/page/2/"
-                class="button big next">Next Page</a></li>
+                class="button big next">下一页</a></li>
     
 </ul>
 
@@ -548,10 +536,6 @@ class Person { String name; String country; void setCountry(String country){ thi
                 </header>
             
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/categories/flutter/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
@@ -689,15 +673,6 @@ class Person { String name; String country; void setCountry(String country){ thi
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2018/">2018</a>
-                                <span style="float:right;">4</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
                                 <a href="/categories/dart/">dart</a>
                                 <span style="float:right;">4</span>
                             </header>
@@ -716,7 +691,7 @@ class Person { String name; String country; void setCountry(String country){ thi
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2016/">2016</a>
+                                <a href="/categories/css/">css</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -725,34 +700,7 @@ class Person { String name; String country; void setCountry(String country){ thi
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2019/">2019</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/css3/">CSS3</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/html5/">HTML5</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vue/">vue</a>
+                                <a href="/categories/html/">html</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -786,10 +734,6 @@ class Person { String name; String country; void setCountry(String country){ thi
     
         <section id="footer">
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/categories/flutter/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>

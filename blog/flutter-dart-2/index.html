@@ -11,7 +11,6 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.53" />
         
 
 
@@ -29,23 +28,15 @@
         <meta property="og:title" content="[Flutter-前端视角]dart语言学习笔记（2）" />
 <meta property="og:description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://liuys.me/blog/flutter-dart-2/" /><meta property="article:published_time" content="2018-08-09T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-08-09T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://liuys.me/blog/flutter-dart-2/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2018-08-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-08-09T00:00:00+00:00" />
 
-        
-<meta itemprop="name" content="[Flutter-前端视角]dart语言学习笔记（2）">
-<meta itemprop="description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～">
-
-
-<meta itemprop="datePublished" content="2018-08-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-08-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="164">
-
-
-
+        <meta itemprop="name" content="[Flutter-前端视角]dart语言学习笔记（2）">
+<meta itemprop="description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～"><meta itemprop="datePublished" content="2018-08-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-08-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="168">
 <meta itemprop="keywords" content="" />
-
-        
 
         
 
@@ -394,63 +385,47 @@
 
 
     <div id="content">
-        
-
-<h3 id="标记特殊需要记忆的点">标记特殊需要记忆的点</h3>
-
+        <h3 id="标记特殊需要记忆的点">标记特殊需要记忆的点</h3>
 <ol>
 <li>取整<code>~/</code>操作符之前可能很少看到，代码如下</li>
 </ol>
-
-<pre><code>int a = 3；
+<pre tabindex="0"><code>int a = 3；
 int b = 2；
 print(a~/b);//输出1
-</code></pre>
-
-<p>2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候，
-可以使用级联操作符 <code>..</code>(相当于js的链式调用，隐式的返回原对象)</p>
-
-<pre><code>class Person {
+</code></pre><p>2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候，
+可以使用级联操作符 <code>..</code>(相当于 js 的链式调用，隐式的返回原对象)</p>
+<pre tabindex="0"><code>class Person {
     String name;
     String country;
     void setCountry(String country){
       this.country = country;
     }
-    String toString() =&gt; 'Name:$name\nCountry:$country';
+    String toString() =&gt; &#39;Name:$name\nCountry:$country&#39;;
 }
 void main() {
   Person p = new Person();
-  p ..name = 'Wang'
-    ..setCountry('China');
+  p ..name = &#39;Wang&#39;
+    ..setCountry(&#39;China&#39;);
   print(p);
 }
-</code></pre>
-
-<ol>
+</code></pre><ol start="3">
 <li><code>If</code>语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为<code>false</code>）</li>
 </ol>
-
-<pre><code>if(i&lt;0){
-  print('i &lt; 0');
+<pre tabindex="0"><code>if(i&lt;0){
+  print(&#39;i &lt; 0&#39;);
 }else if(i ==0){
-  print('i = 0');
+  print(&#39;i = 0&#39;);
 } else {
-  print('i &gt; 0');
+  print(&#39;i &gt; 0&#39;);
 }
-</code></pre>
-
-<ol>
+</code></pre><ol start="4">
 <li>循环 <code>for forEach for-in</code></li>
 </ol>
-
-<pre><code>for(int i = 0; i&lt;3; i++) {
+<pre tabindex="0"><code>for(int i = 0; i&lt;3; i++) {
   print(i);
 }
-</code></pre>
-
-<p>如果迭代的对象是容器，那么可以使用<code>forEach</code>或者<code>for-in</code></p>
-
-<pre><code>var collection = [0, 1, 2];
+</code></pre><p>如果迭代的对象是容器，那么可以使用<code>forEach</code>或者<code>for-in</code></p>
+<pre tabindex="0"><code>var collection = [0, 1, 2];
 
 // forEach的参数为Function
 collection.forEach(print);
@@ -458,49 +433,39 @@ collection.forEach(print);
 for(var x in collection) {
   print(x);
 }
-</code></pre>
-
-<p>另外，<code>while</code>和<code>do-while</code>没有什么变化</p>
-
-<pre><code>while(boolean){
+</code></pre><p>另外，<code>while</code>和<code>do-while</code>没有什么变化</p>
+<pre tabindex="0"><code>while(boolean){
   //do something
 }
- 
+
 do{
   //do something
 } while(boolean)
-</code></pre>
-
-<p>5.<code>swith</code>的参数可以是<code>num</code>，或者<code>String</code></p>
-
-<pre><code>var command = 'OPEN';
+</code></pre><p>5.<code>swith</code>的参数可以是<code>num</code>，或者<code>String</code></p>
+<pre tabindex="0"><code>var command = &#39;OPEN&#39;;
 switch (command) {
-  case 'CLOSED':
+  case &#39;CLOSED&#39;:
     break;
-  case 'OPEN':
+  case &#39;OPEN&#39;:
     break;
   default:
-    print('Default');
+    print(&#39;Default&#39;);
 }
-</code></pre>
-
-<p>特殊用法，使用==continue== &amp; flag ,其他和js没什么区别</p>
-
-<pre><code>var command = 'CLOSED';
+</code></pre><p>特殊用法，使用==continue== &amp; flag ,其他和 js 没什么区别</p>
+<pre tabindex="0"><code>var command = &#39;CLOSED&#39;;
   switch (command) {
-    case 'CLOSED':
-      print('CLOSED');
+    case &#39;CLOSED&#39;:
+      print(&#39;CLOSED&#39;);
       continue nowClosed; // Continues executing at the nowClosed flag.
-    case 'OPEN':
-      print('OPEN');
+    case &#39;OPEN&#39;:
+      print(&#39;OPEN&#39;);
       break;
     nowClosed: // Runs for both CLOSED and NOW_CLOSED.
-    case 'NOW_CLOSED':
-      print('NOW_CLOSED');
+    case &#39;NOW_CLOSED&#39;:
+      print(&#39;NOW_CLOSED&#39;);
       break;
   }
 </code></pre>
-
     </div>
 
     <footer>
@@ -524,8 +489,6 @@ switch (command) {
     
 
     
-    
-        <li><a href='/categories/2018'>2018</a></li>
     
         <li><a href='/categories/flutter'>flutter</a></li>
     
@@ -589,7 +552,6 @@ gitment.render('comments-container')
                 </header>
             
             <ul class="icons">
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
@@ -727,15 +689,6 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2018/">2018</a>
-                                <span style="float:right;">4</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
                                 <a href="/categories/dart/">dart</a>
                                 <span style="float:right;">4</span>
                             </header>
@@ -754,7 +707,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2016/">2016</a>
+                                <a href="/categories/css/">css</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -763,34 +716,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2019/">2019</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/css3/">CSS3</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/html5/">HTML5</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vue/">vue</a>
+                                <a href="/categories/html/">html</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -824,7 +750,6 @@ gitment.render('comments-container')
     
         <section id="footer">
             <ul class="icons">
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>

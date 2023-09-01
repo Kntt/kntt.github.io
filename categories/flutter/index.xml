@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>flutter on Kntt&#39;s Blog</title>
@@ -6,24 +6,19 @@
     <description>Recent content in flutter on Kntt&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://liuys.me/categories/flutter/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 28 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://liuys.me/categories/flutter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Flutter-前端视角]学习总结</title>
       <link>http://liuys.me/blog/flutter-dart-4/</link>
       <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-4/</guid>
-      <description>[Flutter-前端视角]dart语言学习笔记（1）
-[Flutter-前端视角]dart语言学习笔记（2）
-[Flutter-前端视角]dart语言学习笔记（3）
- 对应的前端HTML标签  HTML里面的标签在flutter里面叫做Widget,但是Widget并不是html里面的标签，因为css里面的一些属性也处理成相应的Widget了。
-也就是说Widget包含标签和CSS属性
-  h1～h6,p,span文字相关标签  // Text类，可以看作是块级的文字显示 new Text( &amp;quot;Lorem ipsum&amp;quot;, style: new TextStyle( fontSize: 24.0 fontWeight: FontWeight.w900, fontFamily: &amp;quot;Georgia&amp;quot;, ), ) // 行内文字使用TextSpan类 new TextSpan( style: bold24Roboto, children: &amp;lt;TextSpan&amp;gt;[ new TextSpan(text: &amp;quot;Lorem &amp;quot;), new TextSpan( text: &amp;quot;ipsum&amp;quot;, style: new TextStyle( fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 48.0, ), ), ], )   这两个类都只能处理文字样式，fontsize， fontweight等。间距等属性要借助其他类去处理
-  img标签  // 网络图片 Image.</description>
+      <description>[Flutter-前端视角]dart 语言学习笔记（1）
+[Flutter-前端视角]dart 语言学习笔记（2）
+[Flutter-前端视角]dart 语言学习笔记（3）
+对应的前端 HTML 标签 HTML 里面的标签在 flutter 里面叫做Widget,但是Widget并不是 html 里面的标签，因为 css 里面的一些属性也处理成相应的Widget了。
+也就是说Widget包含标签和 CSS 属性
+h1 ～ h6,p,span 文字相关标签 // Text类，可以看作是块级的文字显示 new Text( &amp;#34;Lorem ipsum&amp;#34;, style: new TextStyle( fontSize: 24.0 fontWeight: FontWeight.w900, fontFamily: &amp;#34;Georgia&amp;#34;, ), ) // 行内文字使用TextSpan类 new TextSpan( style: bold24Roboto, children: &amp;lt;TextSpan&amp;gt;[ new TextSpan(text: &amp;#34;Lorem &amp;#34;), new TextSpan( text: &amp;#34;ipsum&amp;#34;, style: new TextStyle( fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 48.0, ), ), ], ) 这两个类都只能处理文字样式，fontsize， fontweight 等。间距等属性要借助其他类去处理</description>
     </item>
     
     <item>
@@ -32,14 +27,15 @@
       <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-3/</guid>
-      <description>类和对象 Dart是一门使用类和单继承的面向对象语言 &amp;gt;所有的对象都是类的实例，并且所有的类都是Object的子类
- 定义   类的定义用class关键字
+      <description>类和对象 Dart 是一门使用类和单继承的面向对象语言
+所有的对象都是类的实例，并且所有的类都是Object的子类
+定义 类的定义用class关键字
 如果未显式定义构造函数，会默认一个空的构造函数
 使用new关键字和构造函数来创建对象
- 2.构造函数
- 如果只是简单的参数传递，可以在构造函数的参数前加this关键字定义或者参数后加: 再赋值
+2.构造函数
+如果只是简单的参数传递，可以在构造函数的参数前加this关键字定义或者参数后加 : 再赋值
 没有函数体的函数可以直接写;来结束函数声明
- class Point { num x; num y; num z; // 第一个值传递给this.x，第二个值传递给this.y, 类似js中的解构赋值 Point(this.x, this.y, z) { this.z = z; } // 命名构造函数，格式为Class.name(var param) Point.fromList(var list): x = list[0], y = list[1], z=list[2]; //当然，上面句你也可以简写为：this相当于自身的构造函数 //Point.fromList(var list):this(list[0], list[1], list[2]); String toString() =&amp;gt; &#39;x:$x y:$y z:$z&#39;; } void main() { var p1 = new Point(1, 2, 3); var p2 = new Point.</description>
+class Point { num x; num y; num z; // 第一个值传递给this.x，第二个值传递给this.y, 类似js中的解构赋值 Point(this.x, this.y, z) { this.z = z; } // 命名构造函数，格式为Class.name(var param) Point.fromList(var list): x = list[0], y = list[1], z=list[2]; //当然，上面句你也可以简写为：this相当于自身的构造函数 //Point.fromList(var list):this(list[0], list[1], list[2]); String toString() =&amp;gt; &amp;#39;x:$x y:$y z:$z&amp;#39;; } void main() { var p1 = new Point(1, 2, 3); var p2 = new Point.</description>
     </item>
     
     <item>
@@ -48,8 +44,8 @@
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-2/</guid>
-      <description>标记特殊需要记忆的点  取整~/操作符之前可能很少看到，代码如下  int a = 3； int b = 2； print(a~/b);//输出1  2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于js的链式调用，隐式的返回原对象)
-class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&amp;gt; &#39;Name:$name\nCountry:$country&#39;; } void main() { Person p = new Person(); p ..name = &#39;Wang&#39; ..setCountry(&#39;China&#39;); print(p); }   If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false）  if(i&amp;lt;0){ print(&#39;i &amp;lt; 0&#39;); }else if(i ==0){ print(&#39;i = 0&#39;); } else { print(&#39;i &amp;gt; 0&#39;); }   循环 for forEach for-in  for(int i = 0; i&amp;lt;3; i++) { print(i); }  如果迭代的对象是容器，那么可以使用forEach或者for-in</description>
+      <description>标记特殊需要记忆的点 取整~/操作符之前可能很少看到，代码如下 int a = 3； int b = 2； print(a~/b);//输出1 2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于 js 的链式调用，隐式的返回原对象)
+class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&amp;gt; &amp;#39;Name:$name\nCountry:$country&amp;#39;; } void main() { Person p = new Person(); p ..name = &amp;#39;Wang&amp;#39; ..setCountry(&amp;#39;China&amp;#39;); print(p); } If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false） if(i&amp;lt;0){ print(&amp;#39;i &amp;lt; 0&amp;#39;); }else if(i ==0){ print(&amp;#39;i = 0&amp;#39;); } else { print(&amp;#39;i &amp;gt; 0&amp;#39;); } 循环 for forEach for-in for(int i = 0; i&amp;lt;3; i++) { print(i); } 如果迭代的对象是容器，那么可以使用forEach或者for-in</description>
     </item>
     
     <item>
@@ -58,7 +54,7 @@ class Person { String name; String country; void setCountry(String country){ thi
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-1/</guid>
-      <description>一. 基础数据类型 - 一切皆对象  Numbers Strings Booleans Lists Maps Runes (用于在字符串中表示 Unicode 字符) &amp;ndash; 后面继续看 Symbols   声明变量 关键字var const final  a. var // 通过var声明变量，这一点和js没什么区别 b. const , final // 这两个关键字都是声明常量的（重点看下面的区别） final time = new DateTime.now(); //Ok const time = new DateTime.now(); //Error，new DateTime.now()不是const常量 // const 声明的常量不能是变量， 也就是说不能是官方文档所说的运行时常量 // final 声明的常量可以是运行时常量也可以是编译时常量（final包含const） // 例如：声明 PI 是个运行时常量 就用const PI = 3.14159 // var、final等在左边定义变量的时候，并不关心右边是不是常量 // 但是如果右边用了const，那么不管左边如何，右边都必须是常量 const list = const[1,2,3];//Ok const list = [1,2,3];//Error final list = [1,2,3];//Ok final list = const[1,2,3];//Ok final list = const[new DateTime.</description>
+      <description>一. 基础数据类型 - 一切皆对象 Numbers Strings Booleans Lists Maps Runes (用于在字符串中表示 Unicode 字符) &amp;ndash; 后面继续看 Symbols 声明变量 关键字var const final a. var // 通过var声明变量，这一点和js没什么区别 b. const , final // 这两个关键字都是声明常量的（重点看下面的区别） final time = new DateTime.now(); //Ok const time = new DateTime.now(); //Error，new DateTime.now()不是const常量 // const 声明的常量不能是变量， 也就是说不能是官方文档所说的运行时常量 // final 声明的常量可以是运行时常量也可以是编译时常量（final包含const） // 例如：声明 PI 是个运行时常量 就用const PI = 3.14159 // var、final等在左边定义变量的时候，并不关心右边是不是常量 // 但是如果右边用了const，那么不管左边如何，右边都必须是常量 const list = const[1,2,3];//Ok const list = [1,2,3];//Error final list = [1,2,3];//Ok final list = const[1,2,3];//Ok final list = const[new DateTime.</description>
     </item>
     
   </channel>

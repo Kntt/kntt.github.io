@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kntt&#39;s Blog</title>
@@ -6,18 +6,14 @@
     <description>Recent content on Kntt&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 09 Mar 2016 20:10:46 +0100</lastBuildDate>
-    
-	<atom:link href="http://liuys.me/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 17 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://liuys.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于我</title>
       <link>http://liuys.me/about/</link>
-      <pubDate>Wed, 09 Mar 2016 20:10:46 +0100</pubDate>
+      <pubDate>Fri, 18 Aug 2023 20:10:46 +0100</pubDate>
       
       <guid>http://liuys.me/about/</guid>
-      <description>个人信息  刘岩松 - 男 - 1988 工作年限：6年 技术博客：liuys.me Github：https://github.com/Kntt 职位：高级前端工程师 城市：北京   工作经历 凡普金科集团有限公司 （ 2017年3月 ~ 至今 ） 燕之庐技术有限公司 （ 2015年9月 ~ 2017年3月 ） 中国石油独山子石化分公司（ 2011年9月 ~ 2015年9月 ）  开源项目 1. Vue2.0 Starter 基于vue官方template创建的开箱即用的脚手架  增加版本控制脚本version.js，控制发布版本 增加mock配置， 方便前后端分离开发 使用husky，处理precommit，保证提交前代码lint，eslint可以根据个人或团队规范自行制定 移动端，扩展了flexible.js, 配合px2rem 使用rem适配需要请查看app分支  2. Taro-request 对taro的request模块的扩展  扩展请求拦截，响应拦截 Promise包装请求，使用过程更利于ES6新语法 计划增加 请求超时处理，请求冻结处理，主动取消请求功能  3. flutter-app-study 学习flutter过程写的demo  flutter布局页面 通过编码使用复杂背景，避免使用背景图片 使用redux进行状态管理 管理静态资源，通过iconfont管理应用图标 扫码功能实现   技能清单  前端开发：JavaScript/TypeScript/HTML/CSS 前端框架：Vue/Angular/React 前端工具：SaSS/LeSS/Stylus/Webpack/RollupBower/Gulp/Grunt 客户端框架：Flutter/Electron 服务端开发：NodeJs 数据库相关：MySQL/SQLite/MongoDB 版本管理：Git    与我联系  Email : kntt9968@gmail.</description>
+      <description>个人信息 Kntt - 前端工程师 城市 - 北京 工作经历 创业公司（去创业） 北京希瑞亚斯有限公司 （ 2022 年 4 月 ~ 2023 年 8 月 ） 美团 - （ 2019 年 11 月 ~ 2022 年 3 月 ） 凡普金科集团有限公司 （ 2017 年 3 月 ~ 2019 年 10 月 ） 燕之庐技术有限公司 （ 2015 年 9 月 ~ 2017 年 3 月 ） 中国石油独山子石化分公司（ 2011 年 9 月 ~ 2015 年 9 月 ） 开源项目 1.</description>
     </item>
     
     <item>
@@ -26,15 +22,13 @@
       <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/vue-webview-bridge/</guid>
-      <description>项目地址：vue-webview-js-bridge  主要功能：基于WebViewJavascriptBridge开发的webview-js-bridge的vue插件，后面废话较多，可以直接看项目。如果刚好闲来无事，权当打发时间
- 故事背景  本人前端，在一个移动办公APP团队。由于业务简单，并没有使用RN，WEEX等技术。简单的使用native做了一个壳，主要逻辑都是前端控制。主技术栈是Vue.
- bug出现  在一段时间内，团队接到多人反馈，APP每天都需要重新登陆。作为团队的前端我很诧异，因为登陆大token在前端保存，有效期是三天，怎么可能会每天都要登陆呢？
- 排查原因  token有效期三天这个肯定没有问题 团队成员手机都没出过问题，证明逻辑没问题 收集问题反馈人手机信息，发现所有反馈人员的手机有一个共同点，储存空间都不足（ios），问题也主要集中在苹果手机   定位问题原因，可能是因为手机储存空间不足，把储存的token清理了。按着这个思路开始排查&amp;hellip; 难道是手机内存空间不足，把储存的token当作没用的信息清理了？（token存在localstorage里面）。 通过google发现，ios确实存在这种情况，当手机储存空间不足时候会把系统认为无用的信息清理掉，给主要程序提供运行环境。
- 问题复现  找到一台储存空间不足的苹果测试机，登陆到APP后，找一部非常大的电影下载。这时候系统就会清理空间来满足下载电影的需求。结果发现APP需要重新登陆了。问题复现，原因确认。
- 解决问题  一个小APP，仅仅为了储存token而引入sqlite之类的本地数据库，很有些大材小用。但是localstorage，cookie等能储存的地方又都在系统清理的范围内。最后决定把token储存在native端。
- 解决方案  native开发类似localstorage的功能 token存入native端 前端启动时查询native端是否存在token，存在就同步到localstorage，不存在，跳转登陆页面。 其他逻辑不变   方案确定，一个字，撸起袖子一顿猛干。。。
- 坑中有坑  你说难受不难受&amp;hellip;，就不描述经过了，心疼。直接说结论了 前端和Native端通信采用的是WebViewJavascriptBridge，问题就出在这里，见代码：
-import jsBridge from &#39;./utils/native&#39; // 省略n行... router.beforeEach((to, from, next) =&amp;gt; { if (to.meta.auth) { // 问题出在这里，从APP启动到vue运行到这里，jsBridge实例还未初始化完成，导致jsBridge是undifined jsBridge.callHandler(&#39;getStorage&#39;, {key: &#39;token&#39;}).then(res =&amp;gt; { let token = res.</description>
+      <description>项目地址：vue-webview-js-bridge 主要功能：基于WebViewJavascriptBridge开发的 webview-js-bridge 的 vue 插件，后面废话较多，可以直接看项目。如果刚好闲来无事，权当打发时间
+故事背景 本人前端，在一个移动办公 APP 团队。由于业务简单，并没有使用 RN，WEEX 等技术。简单的使用 native 做了一个壳，主要逻辑都是前端控制。主技术栈是 Vue.
+bug 出现 在一段时间内，团队接到多人反馈，APP 每天都需要重新登陆。作为团队的前端我很诧异，因为登陆大 token 在前端保存，有效期是三天，怎么可能会每天都要登陆呢？
+排查原因 token 有效期三天这个肯定没有问题 团队成员手机都没出过问题，证明逻辑没问题 收集问题反馈人手机信息，发现所有反馈人员的手机有一个共同点，储存空间都不足（ios），问题也主要集中在苹果手机 定位问题原因，可能是因为手机储存空间不足，把储存的 token 清理了。按着这个思路开始排查&amp;hellip; 难道是手机内存空间不足，把储存的 token 当作没用的信息清理了？（token 存在 localstorage 里面）。 通过 google 发现，ios 确实存在这种情况，当手机储存空间不足时候会把系统认为无用的信息清理掉，给主要程序提供运行环境。
+问题复现 找到一台储存空间不足的苹果测试机，登陆到 APP 后，找一部非常大的电影下载。这时候系统就会清理空间来满足下载电影的需求。结果发现 APP 需要重新登陆了。问题复现，原因确认。
+解决问题 一个小 APP，仅仅为了储存 token 而引入 sqlite 之类的本地数据库，很有些大材小用。但是 localstorage，cookie 等能储存的地方又都在系统清理的范围内。最后决定把 token 储存在 native 端。
+解决方案 native 开发类似 localstorage 的功能 token 存入 native 端 前端启动时查询 native 端是否存在 token，存在就同步到 localstorage，不存在，跳转登陆页面。 其他逻辑不变 方案确定，一个字，撸起袖子一顿猛干。。。</description>
     </item>
     
     <item>
@@ -43,13 +37,12 @@ import jsBridge from &#39;./utils/native&#39; // 省略n行... router.beforeEach
       <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-4/</guid>
-      <description>[Flutter-前端视角]dart语言学习笔记（1）
-[Flutter-前端视角]dart语言学习笔记（2）
-[Flutter-前端视角]dart语言学习笔记（3）
- 对应的前端HTML标签  HTML里面的标签在flutter里面叫做Widget,但是Widget并不是html里面的标签，因为css里面的一些属性也处理成相应的Widget了。
-也就是说Widget包含标签和CSS属性
-  h1～h6,p,span文字相关标签  // Text类，可以看作是块级的文字显示 new Text( &amp;quot;Lorem ipsum&amp;quot;, style: new TextStyle( fontSize: 24.0 fontWeight: FontWeight.w900, fontFamily: &amp;quot;Georgia&amp;quot;, ), ) // 行内文字使用TextSpan类 new TextSpan( style: bold24Roboto, children: &amp;lt;TextSpan&amp;gt;[ new TextSpan(text: &amp;quot;Lorem &amp;quot;), new TextSpan( text: &amp;quot;ipsum&amp;quot;, style: new TextStyle( fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 48.0, ), ), ], )   这两个类都只能处理文字样式，fontsize， fontweight等。间距等属性要借助其他类去处理
-  img标签  // 网络图片 Image.</description>
+      <description>[Flutter-前端视角]dart 语言学习笔记（1）
+[Flutter-前端视角]dart 语言学习笔记（2）
+[Flutter-前端视角]dart 语言学习笔记（3）
+对应的前端 HTML 标签 HTML 里面的标签在 flutter 里面叫做Widget,但是Widget并不是 html 里面的标签，因为 css 里面的一些属性也处理成相应的Widget了。
+也就是说Widget包含标签和 CSS 属性
+h1 ～ h6,p,span 文字相关标签 // Text类，可以看作是块级的文字显示 new Text( &amp;#34;Lorem ipsum&amp;#34;, style: new TextStyle( fontSize: 24.0 fontWeight: FontWeight.w900, fontFamily: &amp;#34;Georgia&amp;#34;, ), ) // 行内文字使用TextSpan类 new TextSpan( style: bold24Roboto, children: &amp;lt;TextSpan&amp;gt;[ new TextSpan(text: &amp;#34;Lorem &amp;#34;), new TextSpan( text: &amp;#34;ipsum&amp;#34;, style: new TextStyle( fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 48.0, ), ), ], ) 这两个类都只能处理文字样式，fontsize， fontweight 等。间距等属性要借助其他类去处理</description>
     </item>
     
     <item>
@@ -58,14 +51,15 @@ import jsBridge from &#39;./utils/native&#39; // 省略n行... router.beforeEach
       <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-3/</guid>
-      <description>类和对象 Dart是一门使用类和单继承的面向对象语言 &amp;gt;所有的对象都是类的实例，并且所有的类都是Object的子类
- 定义   类的定义用class关键字
+      <description>类和对象 Dart 是一门使用类和单继承的面向对象语言
+所有的对象都是类的实例，并且所有的类都是Object的子类
+定义 类的定义用class关键字
 如果未显式定义构造函数，会默认一个空的构造函数
 使用new关键字和构造函数来创建对象
- 2.构造函数
- 如果只是简单的参数传递，可以在构造函数的参数前加this关键字定义或者参数后加: 再赋值
+2.构造函数
+如果只是简单的参数传递，可以在构造函数的参数前加this关键字定义或者参数后加 : 再赋值
 没有函数体的函数可以直接写;来结束函数声明
- class Point { num x; num y; num z; // 第一个值传递给this.x，第二个值传递给this.y, 类似js中的解构赋值 Point(this.x, this.y, z) { this.z = z; } // 命名构造函数，格式为Class.name(var param) Point.fromList(var list): x = list[0], y = list[1], z=list[2]; //当然，上面句你也可以简写为：this相当于自身的构造函数 //Point.fromList(var list):this(list[0], list[1], list[2]); String toString() =&amp;gt; &#39;x:$x y:$y z:$z&#39;; } void main() { var p1 = new Point(1, 2, 3); var p2 = new Point.</description>
+class Point { num x; num y; num z; // 第一个值传递给this.x，第二个值传递给this.y, 类似js中的解构赋值 Point(this.x, this.y, z) { this.z = z; } // 命名构造函数，格式为Class.name(var param) Point.fromList(var list): x = list[0], y = list[1], z=list[2]; //当然，上面句你也可以简写为：this相当于自身的构造函数 //Point.fromList(var list):this(list[0], list[1], list[2]); String toString() =&amp;gt; &amp;#39;x:$x y:$y z:$z&amp;#39;; } void main() { var p1 = new Point(1, 2, 3); var p2 = new Point.</description>
     </item>
     
     <item>
@@ -74,8 +68,8 @@ import jsBridge from &#39;./utils/native&#39; // 省略n行... router.beforeEach
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-2/</guid>
-      <description>标记特殊需要记忆的点  取整~/操作符之前可能很少看到，代码如下  int a = 3； int b = 2； print(a~/b);//输出1  2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于js的链式调用，隐式的返回原对象)
-class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&amp;gt; &#39;Name:$name\nCountry:$country&#39;; } void main() { Person p = new Person(); p ..name = &#39;Wang&#39; ..setCountry(&#39;China&#39;); print(p); }   If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false）  if(i&amp;lt;0){ print(&#39;i &amp;lt; 0&#39;); }else if(i ==0){ print(&#39;i = 0&#39;); } else { print(&#39;i &amp;gt; 0&#39;); }   循环 for forEach for-in  for(int i = 0; i&amp;lt;3; i++) { print(i); }  如果迭代的对象是容器，那么可以使用forEach或者for-in</description>
+      <description>标记特殊需要记忆的点 取整~/操作符之前可能很少看到，代码如下 int a = 3； int b = 2； print(a~/b);//输出1 2.级联操作符，当你要对一个单一的对象进行一系列的操作的时候， 可以使用级联操作符 ..(相当于 js 的链式调用，隐式的返回原对象)
+class Person { String name; String country; void setCountry(String country){ this.country = country; } String toString() =&amp;gt; &amp;#39;Name:$name\nCountry:$country&amp;#39;; } void main() { Person p = new Person(); p ..name = &amp;#39;Wang&amp;#39; ..setCountry(&amp;#39;China&amp;#39;); print(p); } If语句的判断条件为==bool==值，用法和大多语言一样（只接受布尔值， 其他类型的值都译为false） if(i&amp;lt;0){ print(&amp;#39;i &amp;lt; 0&amp;#39;); }else if(i ==0){ print(&amp;#39;i = 0&amp;#39;); } else { print(&amp;#39;i &amp;gt; 0&amp;#39;); } 循环 for forEach for-in for(int i = 0; i&amp;lt;3; i++) { print(i); } 如果迭代的对象是容器，那么可以使用forEach或者for-in</description>
     </item>
     
     <item>
@@ -84,35 +78,7 @@ class Person { String name; String country; void setCountry(String country){ thi
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/flutter-dart-1/</guid>
-      <description>一. 基础数据类型 - 一切皆对象  Numbers Strings Booleans Lists Maps Runes (用于在字符串中表示 Unicode 字符) &amp;ndash; 后面继续看 Symbols   声明变量 关键字var const final  a. var // 通过var声明变量，这一点和js没什么区别 b. const , final // 这两个关键字都是声明常量的（重点看下面的区别） final time = new DateTime.now(); //Ok const time = new DateTime.now(); //Error，new DateTime.now()不是const常量 // const 声明的常量不能是变量， 也就是说不能是官方文档所说的运行时常量 // final 声明的常量可以是运行时常量也可以是编译时常量（final包含const） // 例如：声明 PI 是个运行时常量 就用const PI = 3.14159 // var、final等在左边定义变量的时候，并不关心右边是不是常量 // 但是如果右边用了const，那么不管左边如何，右边都必须是常量 const list = const[1,2,3];//Ok const list = [1,2,3];//Error final list = [1,2,3];//Ok final list = const[1,2,3];//Ok final list = const[new DateTime.</description>
-    </item>
-    
-    <item>
-      <title>逝去的2016，你收获了什么？</title>
-      <link>http://liuys.me/blog/2016-final/</link>
-      <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://liuys.me/blog/2016-final/</guid>
-      <description>生命的旅途，一程有一程的风景。回看2016年，曾经的片段，总有一些bug，会停留在JIRA上;总有一些技术，静静的停留在计划中。这一年经历了哪些，学会了什么?
-2016-01，离开工作四年的公司，只为了离家更近！ 很想念新疆的蓝天，没有雾霾的日子，想念滑雪一圈几公里的快感！
-问候一句曾经的兄弟们，你们还好吗？
-2016-02 —— 2016-04，回到北京，进入现在的公司！ 回来做的第一个项目：微信点餐系统（名字就不说了）
-期间：印象最深刻的一个思想——去中心化的O2O！
-也是正式开始写移动端页面。
-以前一直写的管理后台，移动端项目接触的非常少，开始写移动端的时候遇到过很多坑，前一篇文章就是填坑过程中总结的一些东西。当然不仅仅是这些坑，还有一些是真的忘了（0.0好了伤疤忘了疼）。这一阶段收获还是蛮多的，特别是移动端的一些技巧！后面有时间再整理一些 这个项目的后端语言是Go，从最开始接触的.NET，JAVA，到后来自学的Node，PHP， Go是我最近最感兴趣的，建议有经历的朋友可以学学，语法非常简单，开发速度最快的编译型语言（不知道是不是之一）。都说处理高并发非常厉害，作为一个前端我是真看不出来，嘿嘿！
-最重要的收获：对于微信JSDK，有了非常熟练的掌握
-2016-05 —— 2016-08，回到老本行，管理后台！ 与之前不同的地方，这次是 angular + webpack 构建的后台项目
-收获：
-1. 通过自己编写directive，对angular的指令有了更深刻的了解。这也是angular的乐趣之一
-2. 编写service，学到了一种angular思想，controller只处理逻辑问题，传输数据，用户信息，用户权限等操作，尽可能的放在service 里面完成
-3. webpack的乐趣，使用插件来提高开发效率，掌握前端自动化工具，为了更好的专注于前端本身
-4. 使用了MVC框架之后，发现特别的不喜欢频繁的操作DOM了，这也是我学些VUE的一个动力！
-5. 自学VUE，自己写了一个微信打卡的小项目，使用价值不高，只是单纯的为了学习VUE。后面共享到Github供大家参考!
-2016-09，发现Hugo，搭建自己的博客！ 很早就有搭建博客的想法，最开始看的是Hexo，总觉得不是自己的菜。直到发现hugo，是真的喜欢！如果你也在寻找，不妨试一试，有什么问题可以留言，一起探讨！
-2016-10 —— 2016-12，开始关注angular2，TypeScript 写angular1项目，组件化的思想开始进入我的视线！到自学VUE，再次看到组件化的思想，让我正视前端的发展方向！回想以前常用的CV大法，发现确实是非常稚嫩。因此我的目光开始关注这方面的技术，一切皆组件，angular2也是在这个时候进入我的学习计划中。写ng1项目时候，社区里面反应的弊端，大部分我都遇到过，因此对于ng2的期望是非常的高，它也没有让我失望！学习ng2，自然少不了ts了，这个JavaScript的超集，解决了js的大部分诟病，更彻底将js转变为面向对象的开发方式（类java），学过java的上手回非常快，希望可以有一起学习的朋友！
-最后 2016算是一个满意的结束，成绩不多，也没有什么遗憾！
-2017年的第一个目标，继续学习Typescript，写一个自己的ng2项目！
-2016最重要的收获是，认识了她！以后最大的目标就是：让你过的幸福！！！ 加油</description>
+      <description>一. 基础数据类型 - 一切皆对象 Numbers Strings Booleans Lists Maps Runes (用于在字符串中表示 Unicode 字符) &amp;ndash; 后面继续看 Symbols 声明变量 关键字var const final a. var // 通过var声明变量，这一点和js没什么区别 b. const , final // 这两个关键字都是声明常量的（重点看下面的区别） final time = new DateTime.now(); //Ok const time = new DateTime.now(); //Error，new DateTime.now()不是const常量 // const 声明的常量不能是变量， 也就是说不能是官方文档所说的运行时常量 // final 声明的常量可以是运行时常量也可以是编译时常量（final包含const） // 例如：声明 PI 是个运行时常量 就用const PI = 3.14159 // var、final等在左边定义变量的时候，并不关心右边是不是常量 // 但是如果右边用了const，那么不管左边如何，右边都必须是常量 const list = const[1,2,3];//Ok const list = [1,2,3];//Error final list = [1,2,3];//Ok final list = const[1,2,3];//Ok final list = const[new DateTime.</description>
     </item>
     
     <item>
@@ -121,14 +87,14 @@ class Person { String name; String country; void setCountry(String country){ thi
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
       <guid>http://liuys.me/blog/mobile-resove/</guid>
-      <description>1. 移动端，a、input标签被点击时查实的半透明灰色背景 描述：发生在wp操作系统中
-&amp;lt;meta name=&amp;quot;msapplication-tap-highlight&amp;quot; content=&amp;quot;no&amp;quot;&amp;gt;  2.关闭IOS键盘首字母大写 描述：
-&amp;lt;input type=&amp;quot;text&amp;quot; autocapitalize=&amp;quot;off&amp;quot; /&amp;gt;  3.禁止文本缩放 描述：
-html { -webkit-text-size-adjust: 100%; }  4.清除输入框内阴影 描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除
-input, textarea { border: 0; -webkit-appearance: none; }  5.忽略页面的数字为电话，忽略email 描述：
-&amp;lt;meta name=&amp;quot;format-detection&amp;quot; content=&amp;quot;telephone=no, email=no&amp;quot;/&amp;gt;  6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
-.xxx { overflow: auto; -webkit-overflow-scrolling: touch; }  7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;
-.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &amp;lt;any onselectstart=&amp;quot;return false;&amp;quot; unselectable=&amp;quot;on&amp;quot;&amp;gt;&amp;lt;/any&amp;gt;  8.</description>
+      <description>1. 移动端，a、input 标签被点击时查实的半透明灰色背景 描述：发生在 wp 操作系统中
+&amp;lt;meta name=&amp;#34;msapplication-tap-highlight&amp;#34; content=&amp;#34;no&amp;#34;&amp;gt; 2.关闭 IOS 键盘首字母大写 描述：
+&amp;lt;input type=&amp;#34;text&amp;#34; autocapitalize=&amp;#34;off&amp;#34; /&amp;gt; 3.禁止文本缩放 描述：
+html { -webkit-text-size-adjust: 100%; } 4.清除输入框内阴影 描述：IOS 中，输入框默认有内部阴影，但是无法用 box-shadow 来清除
+input, textarea { border: 0; -webkit-appearance: none; } 5.忽略页面的数字为电话，忽略 email 描述：
+&amp;lt;meta name=&amp;#34;format-detection&amp;#34; content=&amp;#34;telephone=no, email=no&amp;#34;/&amp;gt; 6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
+.xxx { overflow: auto; -webkit-overflow-scrolling: touch; } 7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在 css 中禁掉;
+.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &amp;lt;any onselectstart=&amp;#34;return false;&amp;#34; unselectable=&amp;#34;on&amp;#34;&amp;gt;&amp;lt;/any&amp;gt; 8.</description>
     </item>
     
   </channel>

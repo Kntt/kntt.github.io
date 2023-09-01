@@ -1,122 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>http://liuys.me/about/</loc>
-    <lastmod>2016-03-09T20:10:46+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-08-18T20:10:46+01:00</lastmod>
+  </url><url>
     <loc>http://liuys.me/blog/vue-webview-bridge/</loc>
     <lastmod>2019-02-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/blog/flutter-dart-4/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/blog/flutter-dart-3/</loc>
-    <lastmod>2018-08-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/blog/flutter-dart-2/</loc>
-    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/blog/flutter-dart-1/</loc>
-    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/blog/2016-final/</loc>
-    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/blog/mobile-resove/</loc>
-    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/2016/</loc>
-    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/2018/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/2019/</loc>
-    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://liuys.me/blog/</loc>
     <lastmod>2019-02-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/css3/</loc>
-    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://liuys.me/categories/</loc>
-    <lastmod>2017-01-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/html5/</loc>
-    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/</loc>
-    <lastmod>2016-03-09T20:10:46+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/dart/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/flutter/</loc>
-    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://liuys.me/categories/vue/</loc>
     <lastmod>2019-02-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://liuys.me/</loc>
+    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://liuys.me/categories/webview/</loc>
     <lastmod>2019-02-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url><url>
+    <loc>http://liuys.me/blog/flutter-dart-4/</loc>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/categories/dart/</loc>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/categories/flutter/</loc>
+    <lastmod>2018-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/blog/flutter-dart-3/</loc>
+    <lastmod>2018-08-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/blog/flutter-dart-2/</loc>
+    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/blog/flutter-dart-1/</loc>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/blog/mobile-resove/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/categories/css/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/categories/html/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://liuys.me/tags/</loc>
   </url>
-  
 </urlset>

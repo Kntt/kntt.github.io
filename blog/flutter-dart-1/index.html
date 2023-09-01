@@ -11,7 +11,6 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.53" />
         
 
 
@@ -29,23 +28,15 @@
         <meta property="og:title" content="[Flutter-前端视角]dart语言学习笔记（1）" />
 <meta property="og:description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://liuys.me/blog/flutter-dart-1/" /><meta property="article:published_time" content="2018-08-06T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2018-08-06T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://liuys.me/blog/flutter-dart-1/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2018-08-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-08-06T00:00:00+00:00" />
 
-        
-<meta itemprop="name" content="[Flutter-前端视角]dart语言学习笔记（1）">
-<meta itemprop="description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～">
-
-
-<meta itemprop="datePublished" content="2018-08-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-08-06T00:00:00&#43;00:00" />
+        <meta itemprop="name" content="[Flutter-前端视角]dart语言学习笔记（1）">
+<meta itemprop="description" content="学习flutter过程，个人对于dart的见解，以及学习过程的记录，欢迎指正～"><meta itemprop="datePublished" content="2018-08-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-08-06T00:00:00+00:00" />
 <meta itemprop="wordCount" content="83">
-
-
-
 <meta itemprop="keywords" content="" />
-
-        
 
         
 
@@ -394,10 +385,7 @@
 
 
     <div id="content">
-        
-
-<h4 id="一-基础数据类型-一切皆对象">一. 基础数据类型 - 一切皆对象</h4>
-
+        <h4 id="一-基础数据类型---一切皆对象">一. 基础数据类型 - 一切皆对象</h4>
 <ul>
 <li>Numbers</li>
 <li>Strings</li>
@@ -407,37 +395,32 @@
 <li>Runes (用于在字符串中表示 Unicode 字符) &ndash; 后面继续看</li>
 <li>Symbols</li>
 </ul>
-
-<hr />
-
+<hr>
 <ol>
 <li>声明变量 关键字<code>var</code> <code>const</code> <code>final</code></li>
 </ol>
-
-<pre><code>a. var
+<pre tabindex="0"><code>a. var
     // 通过var声明变量，这一点和js没什么区别
 b. const , final
     // 这两个关键字都是声明常量的（重点看下面的区别）
-    
+
     final time = new DateTime.now(); //Ok
     const time = new DateTime.now(); //Error，new DateTime.now()不是const常量
-    
+
     // const 声明的常量不能是变量， 也就是说不能是官方文档所说的运行时常量
     // final 声明的常量可以是运行时常量也可以是编译时常量（final包含const）
     // 例如：声明 PI 是个运行时常量  就用const PI = 3.14159
-    
+
     // var、final等在左边定义变量的时候，并不关心右边是不是常量
     // 但是如果右边用了const，那么不管左边如何，右边都必须是常量
-    
+
     const list = const[1,2,3];//Ok
     const list = [1,2,3];//Error
-    
+
     final list = [1,2,3];//Ok
     final list = const[1,2,3];//Ok
     final list = const[new DateTime.now(),2,3];//Error,const右边必须是常量
-    
 </code></pre>
-
     </div>
 
     <footer>
@@ -462,8 +445,6 @@ b. const , final
 
     
     
-        <li><a href='/categories/2018'>2018</a></li>
-    
         <li><a href='/categories/flutter'>flutter</a></li>
     
         <li><a href='/categories/dart'>dart</a></li>
@@ -474,8 +455,8 @@ b. const , final
 </article>
 <ul class="actions pagination">
     
-        <li><a href="http://liuys.me/blog/2016-final/"
-                class="button big previous">逝去的2016，你收获了什么？</a></li>
+        <li><a href="http://liuys.me/blog/mobile-resove/"
+                class="button big previous">移动端网页布局方法总结</a></li>
     
 
     
@@ -526,7 +507,6 @@ gitment.render('comments-container')
                 </header>
             
             <ul class="icons">
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
@@ -664,15 +644,6 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2018/">2018</a>
-                                <span style="float:right;">4</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
                                 <a href="/categories/dart/">dart</a>
                                 <span style="float:right;">4</span>
                             </header>
@@ -691,7 +662,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2016/">2016</a>
+                                <a href="/categories/css/">css</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -700,34 +671,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2019/">2019</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/css3/">CSS3</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/html5/">HTML5</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vue/">vue</a>
+                                <a href="/categories/html/">html</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -761,7 +705,6 @@ gitment.render('comments-container')
     
         <section id="footer">
             <ul class="icons">
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>

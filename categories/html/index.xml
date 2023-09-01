@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Kntt&#39;s Blog</title>
+    <link>http://liuys.me/categories/html/</link>
+    <description>Recent content in html on Kntt&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 20 Sep 2016 00:00:00 +0000</lastBuildDate><atom:link href="http://liuys.me/categories/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>移动端网页布局方法总结</title>
+      <link>http://liuys.me/blog/mobile-resove/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://liuys.me/blog/mobile-resove/</guid>
+      <description>1. 移动端，a、input 标签被点击时查实的半透明灰色背景 描述：发生在 wp 操作系统中
+&amp;lt;meta name=&amp;#34;msapplication-tap-highlight&amp;#34; content=&amp;#34;no&amp;#34;&amp;gt; 2.关闭 IOS 键盘首字母大写 描述：
+&amp;lt;input type=&amp;#34;text&amp;#34; autocapitalize=&amp;#34;off&amp;#34; /&amp;gt; 3.禁止文本缩放 描述：
+html { -webkit-text-size-adjust: 100%; } 4.清除输入框内阴影 描述：IOS 中，输入框默认有内部阴影，但是无法用 box-shadow 来清除
+input, textarea { border: 0; -webkit-appearance: none; } 5.忽略页面的数字为电话，忽略 email 描述：
+&amp;lt;meta name=&amp;#34;format-detection&amp;#34; content=&amp;#34;telephone=no, email=no&amp;#34;/&amp;gt; 6.快速回弹滚动 描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；
+.xxx { overflow: auto; -webkit-overflow-scrolling: touch; } 7.禁止选中内容 描述：如果你不想用户可以选中页面中的内容，那么你可以在 css 中禁掉;
+.user-select-none { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; } // 兼容ie6-9 &amp;lt;any onselectstart=&amp;#34;return false;&amp;#34; unselectable=&amp;#34;on&amp;#34;&amp;gt;&amp;lt;/any&amp;gt; 8.</description>
+    </item>
+    
+  </channel>
+</rss>

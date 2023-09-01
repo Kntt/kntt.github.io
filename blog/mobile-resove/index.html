@@ -11,7 +11,6 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.53" />
         
 
 
@@ -29,23 +28,15 @@
         <meta property="og:title" content="移动端网页布局方法总结" />
 <meta property="og:description" content="移动端网页布局中需要注意事项以及解决方法总结" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://liuys.me/blog/mobile-resove/" /><meta property="article:published_time" content="2016-09-20T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2016-09-20T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://liuys.me/blog/mobile-resove/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2016-09-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-09-20T00:00:00+00:00" />
 
-        
-<meta itemprop="name" content="移动端网页布局方法总结">
-<meta itemprop="description" content="移动端网页布局中需要注意事项以及解决方法总结">
-
-
-<meta itemprop="datePublished" content="2016-09-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2016-09-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="271">
-
-
-
+        <meta itemprop="name" content="移动端网页布局方法总结">
+<meta itemprop="description" content="移动端网页布局中需要注意事项以及解决方法总结"><meta itemprop="datePublished" content="2016-09-20T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-09-20T00:00:00+00:00" />
+<meta itemprop="wordCount" content="329">
 <meta itemprop="keywords" content="" />
-
-        
 
         
 
@@ -394,216 +385,122 @@
 
 
     <div id="content">
-        
-
-<h3 id="1-移动端-a-input标签被点击时查实的半透明灰色背景">1. 移动端，a、input标签被点击时查实的半透明灰色背景</h3>
-
-<p>描述：发生在wp操作系统中</p>
-
-<pre><code>&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;
-</code></pre>
-
-<hr />
-
-<h3 id="2-关闭ios键盘首字母大写">2.关闭IOS键盘首字母大写</h3>
-
+        <h3 id="1-移动端ainput-标签被点击时查实的半透明灰色背景">1. 移动端，a、input 标签被点击时查实的半透明灰色背景</h3>
+<p>描述：发生在 wp 操作系统中</p>
+<pre tabindex="0"><code>&lt;meta name=&#34;msapplication-tap-highlight&#34; content=&#34;no&#34;&gt;
+</code></pre><hr>
+<h3 id="2关闭-ios-键盘首字母大写">2.关闭 IOS 键盘首字母大写</h3>
 <p>描述：</p>
-
-<pre><code>&lt;input type=&quot;text&quot; autocapitalize=&quot;off&quot; /&gt;
-</code></pre>
-
-<hr />
-
-<h3 id="3-禁止文本缩放">3.禁止文本缩放</h3>
-
+<pre tabindex="0"><code>&lt;input type=&#34;text&#34; autocapitalize=&#34;off&#34; /&gt;
+</code></pre><hr>
+<h3 id="3禁止文本缩放">3.禁止文本缩放</h3>
 <p>描述：</p>
-
-<pre><code>html {
+<pre tabindex="0"><code>html {
     -webkit-text-size-adjust: 100%;
 }
-</code></pre>
-
-<hr />
-
-<h3 id="4-清除输入框内阴影">4.清除输入框内阴影</h3>
-
-<p>描述：IOS中，输入框默认有内部阴影，但是无法用box-shadow来清除</p>
-
-<pre><code>input,
+</code></pre><hr>
+<h3 id="4清除输入框内阴影">4.清除输入框内阴影</h3>
+<p>描述：IOS 中，输入框默认有内部阴影，但是无法用 box-shadow 来清除</p>
+<pre tabindex="0"><code>input,
 textarea {
     border: 0;
     -webkit-appearance: none;
 }
-</code></pre>
-
-<hr />
-
-<h3 id="5-忽略页面的数字为电话-忽略email">5.忽略页面的数字为电话，忽略email</h3>
-
+</code></pre><hr>
+<h3 id="5忽略页面的数字为电话忽略-email">5.忽略页面的数字为电话，忽略 email</h3>
 <p>描述：</p>
-
-<pre><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no, email=no&quot;/&gt;
-</code></pre>
-
-<hr />
-
-<h3 id="6-快速回弹滚动">6.快速回弹滚动</h3>
-
+<pre tabindex="0"><code>&lt;meta name=&#34;format-detection&#34; content=&#34;telephone=no, email=no&#34;/&gt;
+</code></pre><hr>
+<h3 id="6快速回弹滚动">6.快速回弹滚动</h3>
 <p>描述：可以选择相应插件，iscroll，idangero swiper，文档一大堆；</p>
-
-<pre><code>.xxx {
+<pre tabindex="0"><code>.xxx {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
-</code></pre>
-
-<hr />
-
-<h3 id="7-禁止选中内容">7.禁止选中内容</h3>
-
-<p>描述：如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉;</p>
-
-<pre><code>.user-select-none {
+</code></pre><hr>
+<h3 id="7禁止选中内容">7.禁止选中内容</h3>
+<p>描述：如果你不想用户可以选中页面中的内容，那么你可以在 css 中禁掉;</p>
+<pre tabindex="0"><code>.user-select-none {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
 // 兼容ie6-9
-&lt;any onselectstart=&quot;return false;&quot; unselectable=&quot;on&quot;&gt;&lt;/any&gt;
-</code></pre>
-
-<hr />
-
-<h3 id="8-移动端取消touch高亮效果">8.移动端取消touch高亮效果</h3>
-
-<p>描述：移动端页面，所有a标签在触发点击时或者所有设置了伪类 :active 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过css以下方法来禁止：</p>
-
-<pre><code>.xxx {
+&lt;any onselectstart=&#34;return false;&#34; unselectable=&#34;on&#34;&gt;&lt;/any&gt;
+</code></pre><hr>
+<h3 id="8移动端取消-touch-高亮效果">8.移动端取消 touch 高亮效果</h3>
+<p>描述：移动端页面，所有 a 标签在触发点击时或者所有设置了伪类 :active 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过 css 以下方法来禁止：</p>
+<pre tabindex="0"><code>.xxx {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-</code></pre>
-
-<hr />
-
-<h3 id="9-移动端禁止保存或拷贝图像">9.移动端禁止保存或拷贝图像</h3>
-
-<p>描述：手机或者pad上长按图像 img ，会弹出选项 存储图像 或者 拷贝图像，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：（IOS有效）</p>
-
-<pre><code>img {
+</code></pre><hr>
+<h3 id="9移动端禁止保存或拷贝图像">9.移动端禁止保存或拷贝图像</h3>
+<p>描述：手机或者 pad 上长按图像 img ，会弹出选项 存储图像 或者 拷贝图像，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：（IOS 有效）</p>
+<pre tabindex="0"><code>img {
     -webkit-touch-callout: none;
 }
-</code></pre>
-
-<hr />
-
-<h3 id="10-解决字体在移动端比例缩小后出现锯齿的问题">10.解决字体在移动端比例缩小后出现锯齿的问题</h3>
-
+</code></pre><hr>
+<h3 id="10解决字体在移动端比例缩小后出现锯齿的问题">10.解决字体在移动端比例缩小后出现锯齿的问题</h3>
 <p>描述：</p>
-
-<pre><code>html {
+<pre tabindex="0"><code>html {
     -webkit-font-smoothing: antialiased;
 }
-</code></pre>
-
-<hr />
-
-<h3 id="11-box-sizing-border-box-改变盒子模型的计算方式">11.box-sizing：border-box；改变盒子模型的计算方式</h3>
-
+</code></pre><hr>
+<h3 id="11box-sizingborder-box改变盒子模型的计算方式">11.box-sizing：border-box；改变盒子模型的计算方式</h3>
 <p>描述：不仅仅是移动端应用，响应式页面都这么玩，根据需要给元素设置，*只代表元素；</p>
-
-<pre><code>* {
+<pre tabindex="0"><code>* {
     box-sizing：border-box；
 }
-</code></pre>
-
-<hr />
-
-<h3 id="12-按钮被按下效果">12.按钮被按下效果</h3>
-
+</code></pre><hr>
+<h3 id="12按钮被按下效果">12.按钮被按下效果</h3>
 <p>描述：</p>
-
-<pre><code>button:active  {
+<pre tabindex="0"><code>button:active  {
     按下样式；
 }
-document.body.addEventListener('touchend', function () { });
-</code></pre>
-
-<hr />
-
-<h3 id="13-按钮被按下效果">13.按钮被按下效果</h3>
-
+document.body.addEventListener(&#39;touchend&#39;, function () { });
+</code></pre><hr>
+<h3 id="13按钮被按下效果">13.按钮被按下效果</h3>
 <p>描述：</p>
-
-<pre><code>button:active  {
+<pre tabindex="0"><code>button:active  {
     按下样式；
 }
-document.body.addEventListener('touchend', function () { });
-</code></pre>
-
-<hr />
-
-<h3 id="14-设置input里面placeholder字体的大小">14.设置input里面placeholder字体的大小</h3>
-
+document.body.addEventListener(&#39;touchend&#39;, function () { });
+</code></pre><hr>
+<h3 id="14设置-input-里面-placeholder-字体的大小">14.设置 input 里面 placeholder 字体的大小</h3>
 <p>描述：</p>
-
-<pre><code>::-webkit-input-placeholder{ font-size:10pt;}
-</code></pre>
-
-<hr />
-
-<h3 id="15-移动端-图片技巧">15.移动端，图片技巧</h3>
-
-<p>描述：记得加上display：block；属性来解决img的边缘空白间隙的1px像素。 图片要适应不同的手机要设置width:100%;而且不能添加高度。</p>
-
-<pre><code>img{
+<pre tabindex="0"><code>::-webkit-input-placeholder{ font-size:10pt;}
+</code></pre><hr>
+<h3 id="15移动端图片技巧">15.移动端，图片技巧</h3>
+<p>描述：记得加上 display：block；属性来解决 img 的边缘空白间隙的 1px 像素。 图片要适应不同的手机要设置 width:100%;而且不能添加高度。</p>
+<pre tabindex="0"><code>img{
     display:block
 }
-</code></pre>
-
-<hr />
-
-<h3 id="16-audio元素和video元素在ios和android中无法自动播放">16.audio元素和video元素在IOS和Android中无法自动播放</h3>
-
+</code></pre><hr>
+<h3 id="16audio-元素和-video-元素在-ios-和-android-中无法自动播放">16.audio 元素和 video 元素在 IOS 和 Android 中无法自动播放</h3>
 <p>描述：可以做成触屏就播放，来解决</p>
-
-<pre><code>$('html').one('touchstart',function(){
+<pre tabindex="0"><code>$(&#39;html&#39;).one(&#39;touchstart&#39;,function(){
     audio.play()
 })
-</code></pre>
-
-<hr />
-
-<h3 id="17-消除transition闪屏">17.消除transition闪屏</h3>
-
-<p>描述：可以开启硬件加速，见18</p>
-
-<pre><code>.css{
+</code></pre><hr>
+<h3 id="17消除-transition-闪屏">17.消除 transition 闪屏</h3>
+<p>描述：可以开启硬件加速，见 18</p>
+<pre tabindex="0"><code>.css{
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
 }
-</code></pre>
-
-<hr />
-
-<h3 id="18-开启硬件加速-解决页面闪白-保证动画流畅">18.开启硬件加速，解决页面闪白，保证动画流畅</h3>
-
-<p>描述：设计高性能CSS3动画的几个要素，尽可能地使用合成属性transform和opacity来设计CSS3动画，不使用position的left和top来定位，<strong>利用translate3D开启GPU加速</strong></p>
-
-<pre><code>.css {
+</code></pre><hr>
+<h3 id="18开启硬件加速解决页面闪白保证动画流畅">18.开启硬件加速，解决页面闪白，保证动画流畅</h3>
+<p>描述：设计高性能 CSS3 动画的几个要素，尽可能地使用合成属性 transform 和 opacity 来设计 CSS3 动画，不使用 position 的 left 和 top 来定位，<strong>利用 translate3D 开启 GPU 加速</strong></p>
+<pre tabindex="0"><code>.css {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-</code></pre>
-
-<hr />
-
-<h3 id="19-针对适配等比缩放的方法">19.针对适配等比缩放的方法</h3>
-
+</code></pre><hr>
+<h3 id="19针对适配等比缩放的方法">19.针对适配等比缩放的方法</h3>
 <p>描述：神器~</p>
-
-<pre><code>@media only screen and (min-width: 1024px){
+<pre tabindex="0"><code>@media only screen and (min-width: 1024px){
     body{zoom:3.2;}
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -630,9 +527,7 @@ document.body.addEventListener('touchend', function () { });
 @media only screen and (min-width: 360px) and (max-width:374px) {
     body{zoom:1.125;}
 }
-</code></pre>
-
-<p>[^本文摘自互联网，以及工作中遇到的问题和处理过程]</p>
+</code></pre><p>[^本文摘自互联网，以及工作中遇到的问题和处理过程]</p>
 
     </div>
 
@@ -658,9 +553,9 @@ document.body.addEventListener('touchend', function () { });
 
     
     
-        <li><a href='/categories/html5'>HTML5</a></li>
+        <li><a href='/categories/html'>html</a></li>
     
-        <li><a href='/categories/css3'>CSS3</a></li>
+        <li><a href='/categories/css'>css</a></li>
     
 </ul>
 
@@ -670,8 +565,8 @@ document.body.addEventListener('touchend', function () { });
     
 
     
-        <li><a href="http://liuys.me/blog/2016-final/"
-                class="button big next">逝去的2016，你收获了什么？</a></li>
+        <li><a href="http://liuys.me/blog/flutter-dart-1/"
+                class="button big next">[Flutter-前端视角]dart语言学习笔记（1）</a></li>
     
 </ul>
 
@@ -717,7 +612,6 @@ gitment.render('comments-container')
                 </header>
             
             <ul class="icons">
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
@@ -855,15 +749,6 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2018/">2018</a>
-                                <span style="float:right;">4</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
                                 <a href="/categories/dart/">dart</a>
                                 <span style="float:right;">4</span>
                             </header>
@@ -882,7 +767,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2016/">2016</a>
+                                <a href="/categories/css/">css</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -891,34 +776,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2019/">2019</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/css3/">CSS3</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/html5/">HTML5</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vue/">vue</a>
+                                <a href="/categories/html/">html</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -952,7 +810,6 @@ gitment.render('comments-container')
     
         <section id="footer">
             <ul class="icons">
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>

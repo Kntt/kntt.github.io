@@ -19,7 +19,6 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.53" />
         
 
 
@@ -38,14 +37,9 @@
 <meta property="og:description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liuys.me/categories/webview/" />
-<meta property="og:updated_time" content="2019-02-17T00:00:00&#43;00:00"/>
 
-        
-<meta itemprop="name" content="webview">
+        <meta itemprop="name" content="webview">
 <meta itemprop="description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端">
-
-
-        
 
         
 
@@ -255,7 +249,7 @@
             February 17, 2019</time>
         <span class="author">Kntt</span>
         
-            <p>1 minute read</p>
+            <p>2 minute read</p>
         
         
     </div>
@@ -285,15 +279,13 @@
     
 
 
-    <p>项目地址：vue-webview-js-bridge  主要功能：基于WebViewJavascriptBridge开发的webview-js-bridge的vue插件，后面废话较多，可以直接看项目。如果刚好闲来无事，权当打发时间
- 故事背景  本人前端，在一个移动办公APP团队。由于业务简单，并没有使用RN，WEEX等技术。简单的使用native做了一个壳，主要逻辑都是前端控制。主技术栈是Vue.
- bug出现  在一段时间内，团队接到多人反馈，APP每天都需要重新登陆。作为团队的前端我很诧异，因为登陆大token在前端保存，有效期是三天，怎么可能会每天都要登陆呢？
- 排查原因  token有效期三天这个肯定没有问题 团队成员手机都没出过问题，证明逻辑没问题 收集问题反馈人手机信息，发现所有反馈人员的手机有一个共同点，储存空间都不足（ios），问题也主要集中在苹果手机   定位问题原因，可能是因为手机储存空间不足，把储存的token清理了。按着这个思路开始排查&hellip; 难道是手机内存空间不足，把储存的token当作没用的信息清理了？（token存在localstorage里面）。 通过google发现，ios确实存在这种情况，当手机储存空间不足时候会把系统认为无用的信息清理掉，给主要程序提供运行环境。
- 问题复现  找到一台储存空间不足的苹果测试机，登陆到APP后，找一部非常大的电影下载。这时候系统就会清理空间来满足下载电影的需求。结果发现APP需要重新登陆了。问题复现，原因确认。
- 解决问题  一个小APP，仅仅为了储存token而引入sqlite之类的本地数据库，很有些大材小用。但是localstorage，cookie等能储存的地方又都在系统清理的范围内。最后决定把token储存在native端。
- 解决方案  native开发类似localstorage的功能 token存入native端 前端启动时查询native端是否存在token，存在就同步到localstorage，不存在，跳转登陆页面。 其他逻辑不变   方案确定，一个字，撸起袖子一顿猛干。。。
- 坑中有坑  你说难受不难受&hellip;，就不描述经过了，心疼。直接说结论了 前端和Native端通信采用的是WebViewJavascriptBridge，问题就出在这里，见代码：
-import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.beforeEach((to, from, next) =&gt; { if (to.meta.auth) { // 问题出在这里，从APP启动到vue运行到这里，jsBridge实例还未初始化完成，导致jsBridge是undifined jsBridge.callHandler(&lsquo;getStorage&rsquo;, {key: &lsquo;token&rsquo;}).then(res =&gt; { let token = res.</p>
+    <p class="summary">项目地址：vue-webview-js-bridge 主要功能：基于WebViewJavascriptBridge开发的 webview-js-bridge 的 vue 插件，后面废话较多，可以直接看项目。如果刚好闲来无事，权当打发时间
+故事背景 本人前端，在一个移动办公 APP 团队。由于业务简单，并没有使用 RN，WEEX 等技术。简单的使用 native 做了一个壳，主要逻辑都是前端控制。主技术栈是 Vue.
+bug 出现 在一段时间内，团队接到多人反馈，APP 每天都需要重新登陆。作为团队的前端我很诧异，因为登陆大 token 在前端保存，有效期是三天，怎么可能会每天都要登陆呢？
+排查原因 token 有效期三天这个肯定没有问题 团队成员手机都没出过问题，证明逻辑没问题 收集问题反馈人手机信息，发现所有反馈人员的手机有一个共同点，储存空间都不足（ios），问题也主要集中在苹果手机 定位问题原因，可能是因为手机储存空间不足，把储存的 token 清理了。按着这个思路开始排查… 难道是手机内存空间不足，把储存的 token 当作没用的信息清理了？（token 存在 localstorage 里面）。 通过 google 发现，ios 确实存在这种情况，当手机储存空间不足时候会把系统认为无用的信息清理掉，给主要程序提供运行环境。
+问题复现 找到一台储存空间不足的苹果测试机，登陆到 APP 后，找一部非常大的电影下载。这时候系统就会清理空间来满足下载电影的需求。结果发现 APP 需要重新登陆了。问题复现，原因确认。
+解决问题 一个小 APP，仅仅为了储存 token 而引入 sqlite 之类的本地数据库，很有些大材小用。但是 localstorage，cookie 等能储存的地方又都在系统清理的范围内。最后决定把 token 储存在 native 端。
+解决方案 native 开发类似 localstorage 的功能 token 存入 native 端 前端启动时查询 native 端是否存在 token，存在就同步到 localstorage，不存在，跳转登陆页面。 其他逻辑不变 方案确定，一个字，撸起袖子一顿猛干。。。</p>
 
     <footer>
         <ul class="actions">
@@ -311,7 +303,7 @@ import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.b
                     
 
                     
-                        Categories
+                        Category
                     
                 
             </li>
@@ -319,10 +311,6 @@ import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.b
     
 
     
-    
-        <li><a href='/categories/2019'>2019</a></li>
-    
-        <li><a href='/categories/vue'>vue</a></li>
     
         <li><a href='/categories/webview'>webview</a></li>
     
@@ -363,10 +351,6 @@ import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.b
                 </header>
             
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/categories/webview/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
@@ -504,15 +488,6 @@ import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.b
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2018/">2018</a>
-                                <span style="float:right;">4</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
                                 <a href="/categories/dart/">dart</a>
                                 <span style="float:right;">4</span>
                             </header>
@@ -531,7 +506,7 @@ import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.b
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2016/">2016</a>
+                                <a href="/categories/css/">css</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -540,34 +515,7 @@ import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.b
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2019/">2019</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/css3/">CSS3</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/html5/">HTML5</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vue/">vue</a>
+                                <a href="/categories/html/">html</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -601,10 +549,6 @@ import jsBridge from &lsquo;./utils/native&rsquo; // 省略n行&hellip; router.b
     
         <section id="footer">
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/categories/webview/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>

@@ -2,6 +2,7 @@
 
 <html>
     <head>
+	<meta name="generator" content="Hugo 0.117.0">
         
             
                 <title>Kntt&#39;s Blog</title>
@@ -11,7 +12,6 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.53" />
         
 
 
@@ -30,14 +30,9 @@
 <meta property="og:description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://liuys.me/" />
-<meta property="og:updated_time" content="2016-03-09T20:10:46&#43;01:00"/>
 
-        
-<meta itemprop="name" content="Kntt&#39;s Blog">
+        <meta itemprop="name" content="Kntt&#39;s Blog">
 <meta itemprop="description" content="HTML5 HTML, CSS CSS3,JavaScript, AngularJs VueJs JQuery, ES5 ES6, Node, 前端">
-
-
-        
 
         
 
@@ -250,7 +245,7 @@
             February 17, 2019</time>
         <span class="author">Kntt</span>
         
-            <p>1 minute read</p>
+            <p>2 minute read</p>
         
         
     </div>
@@ -330,163 +325,128 @@
 
 
     <div id="content">
-        
-
-<h3 id="项目地址-vue-webview-js-bridge-https-github-com-kntt-vue-js-bridge">项目地址：<a href="https://github.com/Kntt/vue-js-bridge">vue-webview-js-bridge</a></h3>
-
+        <h3 id="项目地址vue-webview-js-bridgehttpsgithubcomknttvue-js-bridge">项目地址：<a href="https://github.com/Kntt/vue-js-bridge">vue-webview-js-bridge</a></h3>
 <blockquote>
-<p>主要功能：基于<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>开发的webview-js-bridge的vue插件，后面废话较多，可以直接看项目。如果刚好闲来无事，权当打发时间</p>
+<p>主要功能：基于<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>开发的 webview-js-bridge 的 vue 插件，后面废话较多，可以直接看项目。如果刚好闲来无事，权当打发时间</p>
 </blockquote>
-
 <h3 id="故事背景">故事背景</h3>
-
 <blockquote>
-<p>本人前端，在一个移动办公APP团队。由于业务简单，并没有使用RN，WEEX等技术。简单的使用native做了一个壳，主要逻辑都是前端控制。主技术栈是Vue.</p>
+<p>本人前端，在一个移动办公 APP 团队。由于业务简单，并没有使用 RN，WEEX 等技术。简单的使用 native 做了一个壳，主要逻辑都是前端控制。主技术栈是 Vue.</p>
 </blockquote>
-
-<h3 id="bug出现">bug出现</h3>
-
+<h3 id="bug-出现">bug 出现</h3>
 <blockquote>
-<p>在一段时间内，团队接到多人反馈，APP每天都需要重新登陆。作为团队的前端我很诧异，因为登陆大token在前端保存，有效期是三天，怎么可能会每天都要登陆呢？</p>
+<p>在一段时间内，团队接到多人反馈，APP 每天都需要重新登陆。作为团队的前端我很诧异，因为登陆大 token 在前端保存，有效期是三天，怎么可能会每天都要登陆呢？</p>
 </blockquote>
-
 <h3 id="排查原因">排查原因</h3>
-
 <ol>
-<li>token有效期三天这个肯定没有问题</li>
+<li>token 有效期三天这个肯定没有问题</li>
 <li>团队成员手机都没出过问题，证明逻辑没问题</li>
 <li>收集问题反馈人手机信息，发现所有反馈人员的手机有一个共同点，储存空间都不足（ios），问题也主要集中在苹果手机</li>
 </ol>
-
 <blockquote>
-<p>定位问题原因，可能是因为手机储存空间不足，把储存的token清理了。按着这个思路开始排查&hellip;
-难道是手机内存空间不足，把储存的token当作没用的信息清理了？（token存在localstorage里面）。
-通过google发现，ios确实存在这种情况，当手机储存空间不足时候会把系统认为无用的信息清理掉，给主要程序提供运行环境。</p>
+<p>定位问题原因，可能是因为手机储存空间不足，把储存的 token 清理了。按着这个思路开始排查&hellip;
+难道是手机内存空间不足，把储存的 token 当作没用的信息清理了？（token 存在 localstorage 里面）。
+通过 google 发现，ios 确实存在这种情况，当手机储存空间不足时候会把系统认为无用的信息清理掉，给主要程序提供运行环境。</p>
 </blockquote>
-
 <h3 id="问题复现">问题复现</h3>
-
 <blockquote>
-<p>找到一台储存空间不足的苹果测试机，登陆到APP后，找一部非常大的电影下载。这时候系统就会清理空间来满足下载电影的需求。结果发现APP需要重新登陆了。问题复现，原因确认。</p>
+<p>找到一台储存空间不足的苹果测试机，登陆到 APP 后，找一部非常大的电影下载。这时候系统就会清理空间来满足下载电影的需求。结果发现 APP 需要重新登陆了。问题复现，原因确认。</p>
 </blockquote>
-
 <h3 id="解决问题">解决问题</h3>
-
 <blockquote>
-<p>一个小APP，仅仅为了储存token而引入sqlite之类的本地数据库，很有些大材小用。但是localstorage，cookie等能储存的地方又都在系统清理的范围内。最后决定把token储存在native端。</p>
+<p>一个小 APP，仅仅为了储存 token 而引入 sqlite 之类的本地数据库，很有些大材小用。但是 localstorage，cookie 等能储存的地方又都在系统清理的范围内。最后决定把 token 储存在 native 端。</p>
 </blockquote>
-
 <h3 id="解决方案">解决方案</h3>
-
 <ol>
-<li>native开发类似localstorage的功能</li>
-<li>token存入native端</li>
-<li>前端启动时查询native端是否存在token，存在就同步到localstorage，不存在，跳转登陆页面。</li>
+<li>native 开发类似 localstorage 的功能</li>
+<li>token 存入 native 端</li>
+<li>前端启动时查询 native 端是否存在 token，存在就同步到 localstorage，不存在，跳转登陆页面。</li>
 <li>其他逻辑不变</li>
 </ol>
-
 <blockquote>
 <p>方案确定，一个字，撸起袖子一顿猛干。。。</p>
 </blockquote>
-
 <h3 id="坑中有坑">坑中有坑</h3>
-
 <blockquote>
 <p>你说难受不难受&hellip;，就不描述经过了，心疼。直接说结论了
-前端和Native端通信采用的是<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>，问题就出在这里，见代码：</p>
-
-<pre><code class="language-js">import jsBridge from './utils/native'
-// 省略n行...
-router.beforeEach((to, from, next) =&gt; {
-  if (to.meta.auth) {
-    // 问题出在这里，从APP启动到vue运行到这里，jsBridge实例还未初始化完成，导致jsBridge是undifined
-    jsBridge.callHandler('getStorage', {key: 'token'}).then(res =&gt; {
-      let token = res.body
-      if (token &amp;&amp; token !== 'null') {
-        next()
-      } else {
-        next('/login')
-      }
-      store.commit('UPDATE_TOKEN', {token})
-    })
-  } else {
-    next()
-  }
-})
-// 省略n行...
-
-</code></pre>
-
-<p>问题已经确定了，是调用jsBridge实例时，它还未初始化完成。感兴趣的可以去看下<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>源码，虽然初始化时间很短，但是已经造成了问题，APP到这里启动报错。</p>
+前端和 Native 端通信采用的是<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>，问题就出在这里，见代码：</p>
 </blockquote>
-
-<p>继续解决问题：既然未初始化完成，那我们等它完成再用不就完了。有人提议用<code>setTimeout</code>,但是延时多少时间呢？时间短了不一定hold住啊，毕竟不同手机初始化时间还是有差别的。设置长了影响体验，作为一个前端如果用户体验都不顾那还做什么前端，所以这个最容易也是最low的方法被pass了。</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">jsBridge</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./utils/native&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 省略n行...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">beforeEach</span>((<span style="color:#a6e22e">to</span>, <span style="color:#a6e22e">from</span>, <span style="color:#a6e22e">next</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">to</span>.<span style="color:#a6e22e">meta</span>.<span style="color:#a6e22e">auth</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 问题出在这里，从APP启动到vue运行到这里，jsBridge实例还未初始化完成，导致jsBridge是undifined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">jsBridge</span>.<span style="color:#a6e22e">callHandler</span>(<span style="color:#e6db74">&#34;getStorage&#34;</span>, { <span style="color:#a6e22e">key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;token&#34;</span> }).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">body</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">token</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;null&#34;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">next</span>();
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">next</span>(<span style="color:#e6db74">&#34;/login&#34;</span>);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">commit</span>(<span style="color:#e6db74">&#34;UPDATE_TOKEN&#34;</span>, { <span style="color:#a6e22e">token</span> });
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">next</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 省略n行...
+</span></span></span></code></pre></div><p>问题已经确定了，是调用 jsBridge 实例时，它还未初始化完成。感兴趣的可以去看下<a href="https://github.com/marcuswestin/WebViewJavascriptBridge">WebViewJavascriptBridge</a>源码，虽然初始化时间很短，但是已经造成了问题，APP 到这里启动报错。</p>
+<p>继续解决问题：既然未初始化完成，那我们等它完成再用不就完了。有人提议用<code>setTimeout</code>,但是延时多少时间呢？时间短了不一定 hold 住啊，毕竟不同手机初始化时间还是有差别的。设置长了影响体验，作为一个前端如果用户体验都不顾那还做什么前端，所以这个最容易也是最 low 的方法被 pass 了。</p>
 <h3 id="想一个优雅的解决办法">想一个优雅的解决办法</h3>
-
 <blockquote>
-<p>这就是我写的这个package的初衷，废话说了这么多，进入正题了</p>
+<p>这就是我写的这个 package 的初衷，废话说了这么多，进入正题了</p>
 </blockquote>
-
 <ol>
 <li>从解决问题的角度出发</li>
 </ol>
-
 <blockquote>
-<p>既然使用jsBridge实例时你还没初始化完成，那我们就每次等你初始化完成，把实例回传回来后我再调用，这样就不同担心bridge实例不可用的问题了</p>
+<p>既然使用 jsBridge 实例时你还没初始化完成，那我们就每次等你初始化完成，把实例回传回来后我再调用，这样就不同担心 bridge 实例不可用的问题了</p>
 </blockquote>
-
 <p>核心代码</p>
-
-<pre><code class="language-js">// ...
-init (callback) {
-    if (window.WebViewJavascriptBridge) {
-      return callback(window.WebViewJavascriptBridge)
-    }
-    if (window.WVJBCallbacks) {
-      return window.WVJBCallbacks.push(callback)
-    }
-    window.WVJBCallbacks = [callback]
-    var WVJBIframe = document.createElement('iframe')
-    WVJBIframe.style.display = 'none'
-    WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__'
-    document.documentElement.appendChild(WVJBIframe)
-    setTimeout(function () {
-      document.documentElement.removeChild(WVJBIframe)
-    }, 0)
-}
-callHandler (payload) {
-    let _resolve
-    let _reject
-    const readyPromise = new Promise((resolve, reject) =&gt; {
-      _resolve = resolve
-      _reject = reject
-    })
-    this.init(function (bridge) {
-      try {
-        bridge.callHandler(nativeHandlerName, payload, (response) =&gt; {
-          _resolve(response)
-        })
-      } catch (e) {
-        _reject(e)
-      }
-    })
-    return readyPromise
-}
-// ...
-</code></pre>
-
-<blockquote>
-<p>习惯了使用Promise的调用方式，顺手把调用方法Promise化处理。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">init</span> (<span style="color:#a6e22e">callback</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">WebViewJavascriptBridge</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">callback</span>(window.<span style="color:#a6e22e">WebViewJavascriptBridge</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">WVJBCallbacks</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> window.<span style="color:#a6e22e">WVJBCallbacks</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">callback</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    window.<span style="color:#a6e22e">WVJBCallbacks</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">callback</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">WVJBIframe</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;iframe&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">WVJBIframe</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;none&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">WVJBIframe</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;wvjbscheme://__BRIDGE_LOADED__&#39;</span>
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">WVJBIframe</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>      document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">WVJBIframe</span>)
+</span></span><span style="display:flex;"><span>    }, <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">callHandler</span> (<span style="color:#a6e22e">payload</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">_resolve</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">_reject</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">readyPromise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">_resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">resolve</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">_reject</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">reject</span>
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">init</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">bridge</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">bridge</span>.<span style="color:#a6e22e">callHandler</span>(<span style="color:#a6e22e">nativeHandlerName</span>, <span style="color:#a6e22e">payload</span>, (<span style="color:#a6e22e">response</span>) =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">_resolve</span>(<span style="color:#a6e22e">response</span>)
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>      } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">_reject</span>(<span style="color:#a6e22e">e</span>)
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">readyPromise</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ...
+</span></span></span></code></pre></div><blockquote>
+<p>习惯了使用 Promise 的调用方式，顺手把调用方法 Promise 化处理。</p>
 </blockquote>
-
 <h3 id="后续">后续</h3>
-
 <blockquote>
-<p>为了开发效率，不能一直在APP里面调试，又增加了mock功能，debug功能。</p>
+<p>为了开发效率，不能一直在 APP 里面调试，又增加了 mock 功能，debug 功能。</p>
 </blockquote>
-
-<p>项目地址：<a href="https://github.com/Kntt/vue-js-bridge">vue-webview-js-bridge</a> 如果刚好对你还有些帮助，欢迎star，欢迎pr</p>
+<p>项目地址：<a href="https://github.com/Kntt/vue-js-bridge">vue-webview-js-bridge</a> 如果刚好对你还有些帮助，欢迎 star，欢迎 pr</p>
 
     </div>
 
@@ -503,7 +463,7 @@ callHandler (payload) {
                     
 
                     
-                        Categories
+                        Category
                     
                 
             </li>
@@ -511,10 +471,6 @@ callHandler (payload) {
     
 
     
-    
-        <li><a href='/categories/2019'>2019</a></li>
-    
-        <li><a href='/categories/vue'>vue</a></li>
     
         <li><a href='/categories/webview'>webview</a></li>
     
@@ -629,10 +585,6 @@ gitment.render('comments-container')
                 </header>
             
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>
@@ -770,15 +722,6 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2018/">2018</a>
-                                <span style="float:right;">4</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
                                 <a href="/categories/dart/">dart</a>
                                 <span style="float:right;">4</span>
                             </header>
@@ -797,7 +740,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2016/">2016</a>
+                                <a href="/categories/css/">css</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -806,34 +749,7 @@ gitment.render('comments-container')
                     <li>
                         <article>
                             <header>
-                                <a href="/categories/2019/">2019</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/css3/">CSS3</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/html5/">HTML5</a>
-                                <span style="float:right;">1</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vue/">vue</a>
+                                <a href="/categories/html/">html</a>
                                 <span style="float:right;">1</span>
                             </header>
                         </article>
@@ -867,10 +783,6 @@ gitment.render('comments-container')
     
         <section id="footer">
             <ul class="icons">
-                
-                    <li><a href="http://liuys.me/index.xml" type="application/rss+xml"
-                        target="_blank" title="RSS" class="fa fa-rss"></a></li>
-                
                 
                     
 <li><a href="//github.com/Kntt" target="_blank" title="GitHub" class="fa fa-github"></a></li>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Kntt&#39;s Blog</title>
@@ -6,53 +6,13 @@
     <description>Recent content in Categories on Kntt&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 04 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://liuys.me/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 17 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://liuys.me/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2016</title>
-      <link>http://liuys.me/categories/2016/</link>
-      <pubDate>Wed, 04 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://liuys.me/categories/2016/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>2018</title>
-      <link>http://liuys.me/categories/2018/</link>
-      <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://liuys.me/categories/2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>2019</title>
-      <link>http://liuys.me/categories/2019/</link>
+      <title>webview</title>
+      <link>http://liuys.me/categories/webview/</link>
       <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://liuys.me/categories/2019/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSS3</title>
-      <link>http://liuys.me/categories/css3/</link>
-      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://liuys.me/categories/css3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HTML5</title>
-      <link>http://liuys.me/categories/html5/</link>
-      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://liuys.me/categories/html5/</guid>
+      <guid>http://liuys.me/categories/webview/</guid>
       <description></description>
     </item>
     
@@ -75,20 +35,20 @@
     </item>
     
     <item>
-      <title>vue</title>
-      <link>http://liuys.me/categories/vue/</link>
-      <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
+      <title>css</title>
+      <link>http://liuys.me/categories/css/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://liuys.me/categories/vue/</guid>
+      <guid>http://liuys.me/categories/css/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>webview</title>
-      <link>http://liuys.me/categories/webview/</link>
-      <pubDate>Sun, 17 Feb 2019 00:00:00 +0000</pubDate>
+      <title>html</title>
+      <link>http://liuys.me/categories/html/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://liuys.me/categories/webview/</guid>
+      <guid>http://liuys.me/categories/html/</guid>
       <description></description>
     </item>
     
